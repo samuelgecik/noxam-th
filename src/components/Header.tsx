@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -12,6 +13,7 @@ const navLinks = [
 
 export default function Header() {
     const pathname = usePathname();
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/95">
@@ -41,8 +43,26 @@ export default function Header() {
                     ))}
                 </nav>
 
-                {/* Right side: Language switcher + CTA */}
+                {/* Right side: Theme toggle + Language switcher + CTA */}
                 <div className="flex items-center gap-4">
+                    {/* Theme Toggle Button */}
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+                        aria-label="Toggle theme"
+                    >
+                        {theme === "light" ? (
+                            <span className="material-symbols-outlined text-gray-600">
+                                dark_mode
+                            </span>
+                        ) : (
+                            <span className="material-symbols-outlined text-yellow-400">
+                                light_mode
+                            </span>
+                        )}
+                    </button>
+
                     {/* Language Switcher */}
                     <div className="hidden sm:flex items-center gap-1 border-l border-gray-200 dark:border-gray-700 pl-4">
                         <button
@@ -88,3 +108,4 @@ export default function Header() {
         </header>
     );
 }
+

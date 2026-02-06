@@ -4,9 +4,9 @@ export default function Footer() {
     return (
         <footer className="bg-white dark:bg-gray-950 pt-16 pb-8 border-t border-gray-100 dark:border-gray-800">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-16 mb-16">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Company Info */}
-                    <div>
+                    <div className="lg:col-span-2">
                         <div className="flex items-center gap-2 mb-6">
                             <img
                                 src="/logo.png"
@@ -14,21 +14,17 @@ export default function Footer() {
                                 className="h-10 w-auto"
                             />
                         </div>
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
-                            Ready for a transformation?
-                        </h2>
-                        <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md">
-                            Get a free site assessment and quote. Our experts will inspect
-                            your floor and recommend the best restoration plan.
+                        <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
+                            Premium floor restoration services in Thailand. German technology,
+                            expertise from Finland. PU Floor Coating, Terrazzo Polishing, and more.
                         </p>
-                        <div className="space-y-4 text-gray-600 dark:text-gray-300">
+                        <div className="space-y-3 text-gray-600 dark:text-gray-300">
                             <div className="flex items-start gap-3">
-                                <span className="material-symbols-outlined text-primary mt-1">
+                                <span className="material-symbols-outlined text-primary mt-0.5">
                                     location_on
                                 </span>
-                                <p>
-                                    123 Sukhumvit Road, Watthana,
-                                    <br />
+                                <p className="text-sm">
+                                    123 Sukhumvit Road, Watthana,<br />
                                     Bangkok 10110, Thailand
                                 </p>
                             </div>
@@ -36,118 +32,63 @@ export default function Footer() {
                                 <span className="material-symbols-outlined text-primary">
                                     call
                                 </span>
-                                <p>+66 2 123 4567</p>
+                                <p className="text-sm">+66 2 123 4567</p>
                             </div>
                             <div className="flex items-center gap-3">
                                 <span className="material-symbols-outlined text-primary">
                                     mail
                                 </span>
-                                <p>contact@nextgenfloors.co.th</p>
+                                <p className="text-sm">contact@nextgenfloors.co.th</p>
                             </div>
                         </div>
                     </div>
 
-                    {/* Contact Form */}
-                    <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800">
-                        <form className="space-y-4">
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                        htmlFor="footer-name"
-                                    >
-                                        Name
-                                    </label>
-                                    <input
-                                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                                        id="footer-name"
-                                        placeholder="John Doe"
-                                        type="text"
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                        htmlFor="footer-phone"
-                                    >
-                                        Phone
-                                    </label>
-                                    <input
-                                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                                        id="footer-phone"
-                                        placeholder="+66 ..."
-                                        type="tel"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label
-                                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                    htmlFor="footer-email"
-                                >
-                                    Email
-                                </label>
-                                <input
-                                    className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                                    id="footer-email"
-                                    placeholder="john@company.com"
-                                    type="email"
-                                />
-                            </div>
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                        htmlFor="footer-type"
-                                    >
-                                        Floor Type
-                                    </label>
-                                    <select
-                                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                                        id="footer-type"
-                                    >
-                                        <option>Vinyl / PVC</option>
-                                        <option>Terrazzo / Stone</option>
-                                        <option>Epoxy</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                        htmlFor="footer-size"
-                                    >
-                                        Area Size (Sqm)
-                                    </label>
-                                    <input
-                                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                                        id="footer-size"
-                                        placeholder="e.g. 500"
-                                        type="number"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label
-                                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                    htmlFor="footer-message"
-                                >
-                                    Message
-                                </label>
-                                <textarea
-                                    className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                                    id="footer-message"
-                                    placeholder="Tell us about your project..."
-                                    rows={3}
-                                ></textarea>
-                            </div>
-                            <button
-                                className="w-full rounded-lg bg-primary py-3 px-4 text-sm font-bold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors"
-                                type="submit"
-                            >
-                                Request Free Quote
-                            </button>
-                        </form>
+                    {/* Quick Links */}
+                    <div>
+                        <h3 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                            Solutions
+                        </h3>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                    PU Floor Coating
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                    Terrazzo Polishing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                    Functional Additives
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Company Links */}
+                    <div>
+                        <h3 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                            Company
+                        </h3>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link href="/about" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                    Contact
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                    Get a Quote
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 

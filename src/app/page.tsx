@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import ImageComparisonSlider from "@/components/ImageComparisonSlider";
 
 export default function Home() {
 	return (
@@ -68,23 +69,14 @@ export default function Home() {
 							</div>
 						</div>
 
-						{/* Hero Image */}
-						<div className="relative lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/10">
-							<div className="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/20">
-								After Restoration
-							</div>
-							<img
-								alt="High gloss industrial floor reflecting light in a modern warehouse facility"
-								className="h-full w-full object-cover"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuD04dLMezB9DysoiFc_2Va6mbAHEh_z1L6rUXvnTPvPd0l6RkJFk1rj2Dm4EkMXefoX1HKcLpVmdKcuByy2lj0SxU1Q_C23At4pSgg_uhlADJ0M1tb4RH9KMy0PDaVwJyBNy90owFGkaV4JeDNtuuvD0XKbEkOo5Ga5PjG0VA_Gjo-zhhJ9j2kRUW4EKY_G0bVfu98MKvkbyIb0n2HALEwNdDW9bZEqNU0d6ZCW2r6q-fd9Gp32GwDsBuMm25-_3SxXdEO-0NyMva5S"
+						{/* Hero Image - Before/After Comparison Slider */}
+						<div className="relative lg:h-[500px] h-[350px] w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/10">
+							<ImageComparisonSlider
+								beforeImage="/warehouse_before.jpeg"
+								afterImage="/warehouse_after.jpeg"
+								beforeLabel="Before"
+								afterLabel="After Restoration"
 							/>
-							<div className="absolute bottom-0 left-0 w-1/2 h-1/2 border-t-2 border-r-2 border-white/50 bg-black/40 backdrop-blur-sm p-6 hidden md:flex flex-col justify-end">
-								<p className="text-white font-medium">Before</p>
-								<p className="text-white/80 text-sm">
-									Dull, stained, and damaged surface requiring heavy
-									maintenance.
-								</p>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -455,6 +447,15 @@ export default function Home() {
 										✓
 									</span>
 									<span className="text-gray-700 dark:text-gray-300">
+										<strong>Good chemical resistance</strong>, enough for most
+										environments
+									</span>
+								</li>
+								<li className="flex items-start gap-3">
+									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
+										✓
+									</span>
+									<span className="text-gray-700 dark:text-gray-300">
 										<strong>Does not yellow</strong> under sunlight
 									</span>
 								</li>
@@ -530,6 +531,14 @@ export default function Home() {
 									</span>
 									<span className="text-gray-700 dark:text-gray-300">
 										<strong>Long curing time</strong>, causes downtime
+									</span>
+								</li>
+								<li className="flex items-start gap-3">
+									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
+										✓
+									</span>
+									<span className="text-gray-700 dark:text-gray-300">
+										<strong>Glossy and smooth</strong> finish
 									</span>
 								</li>
 							</ul>

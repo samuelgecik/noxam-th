@@ -17,6 +17,7 @@ export default function ImageComparisonSlider({
 }: ImageComparisonSliderProps) {
     const [sliderPosition, setSliderPosition] = useState(50);
     const [isDragging, setIsDragging] = useState(false);
+    const [containerWidth, setContainerWidth] = useState<number | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
     const handleMove = useCallback(
@@ -72,6 +73,26 @@ export default function ImageComparisonSlider({
         };
     }, [isDragging, handleMove]);
 
+    // Measure container width on mount and resize
+    useEffect(() => {
+        const updateWidth = () => {
+            if (containerRef.current) {
+                setContainerWidth(containerRef.current.offsetWidth);
+            }
+        };
+
+        updateWidth();
+
+        const resizeObserver = new ResizeObserver(updateWidth);
+        if (containerRef.current) {
+            resizeObserver.observe(containerRef.current);
+        }
+
+        return () => {
+            resizeObserver.disconnect();
+        };
+    }, []);
+
     return (
         <div
             ref={containerRef}
@@ -95,11 +116,10 @@ export default function ImageComparisonSlider({
                 <img
                     src={beforeImage}
                     alt="Before restoration"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute top-0 left-0 h-full object-cover"
                     style={{
-                        width: containerRef.current
-                            ? `${containerRef.current.offsetWidth}px`
-                            : "100%",
+                        width: containerWidth ? `${containerWidth}px` : "100vw",
+                        minWidth: containerWidth ? `${containerWidth}px` : "100vw",
                         maxWidth: "none",
                     }}
                     draggable={false}

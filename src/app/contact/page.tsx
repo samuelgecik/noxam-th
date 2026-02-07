@@ -4,7 +4,7 @@ import ContactFormClient from "./ContactFormClient";
 export const metadata = {
     title: "Contact Us | NextGen Floor Solutions Thailand",
     description:
-        "Get in touch with NextGen Floor Solutions Thailand. Request a free quote for PU coating, terrazzo polishing, and floor restoration services.",
+        "Get in touch with NextGen Floor Solutions Thailand. Request a free quote for PU coating and floor restoration services. Terrazzo polishing coming soon.",
 };
 
 export default function ContactPage() {

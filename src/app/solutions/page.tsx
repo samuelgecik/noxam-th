@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 export const metadata = {
     title: "Solutions | NextGen Floor Solutions Thailand",
     description:
-        "Advanced floor restoration systems including PU Floor Coating, Terrazzo Polishing, and Functional Additives for industrial and commercial environments.",
+        "Advanced floor restoration systems including PU Floor Coating and Functional Additives for industrial and commercial environments. Terrazzo Polishing coming soon.",
 };
 
 export default function SolutionsPage() {
@@ -26,8 +26,8 @@ export default function SolutionsPage() {
                             Innovative <span className="text-primary">Floor Solutions</span>
                         </h1>
                         <p className="text-xl text-gray-300 max-w-2xl leading-relaxed mb-8">
-                            Advanced restoration systems for modern environments. From
-                            high-performance PU coatings to sustainable terrazzo polishing.
+                            Advanced restoration systems for modern environments.
+                            High-performance PU coatings. Terrazzo polishing coming soon.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <Link
@@ -101,6 +101,13 @@ export default function SolutionsPage() {
 
                         {/* Terrazzo Polishing */}
                         <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                            {/* Coming Soon Badge */}
+                            <div className="absolute top-4 right-4 z-10">
+                                <span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                                    <span className="material-symbols-outlined text-sm mr-1">schedule</span>
+                                    Coming Soon
+                                </span>
+                            </div>
                             <div className="h-48 w-full overflow-hidden">
                                 <img
                                     alt="Terrazzo Polishing"

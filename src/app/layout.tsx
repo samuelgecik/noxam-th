@@ -4,9 +4,9 @@ import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-	title: "NextGen Floor Solutions Thailand | PU Coating & Terrazzo Polishing",
+	title: "NextGen Floor Solutions Thailand | PU Coating & Floor Restoration",
 	description:
-		"Premium floor restoration services in Thailand. German technology, expertise from Finland. PU Floor Coating, Terrazzo Polishing, and more.",
+		"Premium floor restoration services in Thailand. German technology, expertise from Finland. PU Floor Coating and more. Terrazzo Polishing coming soon.",
 };
 
 export default function RootLayout({

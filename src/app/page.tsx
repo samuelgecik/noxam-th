@@ -36,8 +36,8 @@ export default function Home() {
 								<span className="text-primary">Expertise from Finland</span>
 							</h1>
 							<p className="text-lg text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed">
-								The future of floor restoration. Premium PU Coating &amp;
-								Terrazzo Polishing that is durable, hygienic, and sustainable.
+								The future of floor restoration. Premium PU Coating that is
+								durable, hygienic, and sustainable. Terrazzo Polishing coming soon.
 							</p>
 							<div className="flex flex-wrap gap-4 pt-2">
 								<Link
@@ -211,6 +211,13 @@ export default function Home() {
 
 						{/* Card 2 */}
 						<div className="group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-shadow dark:bg-gray-800">
+							{/* Coming Soon Badge */}
+							<div className="absolute top-4 right-4 z-10">
+								<span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+									<span className="material-symbols-outlined text-sm mr-1">schedule</span>
+									Coming Soon
+								</span>
+							</div>
 							<div className="aspect-video w-full overflow-hidden">
 								<img
 									alt="Close up texture of polished terrazzo flooring with colorful stone chips"

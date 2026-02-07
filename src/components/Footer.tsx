@@ -16,7 +16,7 @@ export default function Footer() {
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
                             Premium floor restoration services in Thailand. German technology,
-                            expertise from Finland. PU Floor Coating, Terrazzo Polishing, and more.
+                            expertise from Finland. PU Floor Coating and more. Terrazzo Polishing coming soon.
                         </p>
                         <div className="space-y-3 text-gray-600 dark:text-gray-300">
                             <div className="flex items-start gap-3">
@@ -56,7 +56,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
-                                    Terrazzo Polishing
+                                    Terrazzo Polishing <span className="text-amber-600 dark:text-amber-400">(Coming Soon)</span>
                                 </Link>
                             </li>
                             <li>

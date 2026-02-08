@@ -72,8 +72,8 @@ export default function Home() {
 						{/* Hero Image - Before/After Comparison Slider */}
 						<div className="relative lg:h-[500px] h-[350px] w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/10">
 							<ImageComparisonSlider
-								beforeImage="/warehouse_before.jpeg"
-								afterImage="/warehouse_after.jpeg"
+								beforeImage="/renovations/warehouse_before.jpeg"
+								afterImage="/renovations/warehouse_after.jpeg"
 								beforeLabel="Before"
 								afterLabel="After Restoration"
 							/>

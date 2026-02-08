@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import ImageComparisonSlider from "@/components/ImageComparisonSlider";
+import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 
 export default function Home() {
 	return (
@@ -139,11 +140,28 @@ export default function Home() {
 				</div>
 			</section>
 
+			{/* Project Gallery Section */}
+			<section className="py-20 bg-background-off-white dark:bg-background-dark">
+				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<div className="text-center mb-12">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+							See the Transformation
+						</h2>
+						<p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+							Explore our recent projects and witness the dramatic
+							before-and-after results of our floor restoration services.
+						</p>
+					</div>
+					<BeforeAfterCarousel />
+				</div>
+			</section>
+
 			{/* Core Solutions Section */}
 			<section
-				className="py-20 bg-background-off-white dark:bg-background-dark"
+				className="py-20 bg-white dark:bg-gray-900"
 				id="solutions"
 			>
+
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="mb-12">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -97,7 +97,7 @@ export default function Footer() {
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                         © 2026 Next Gen Floors Thailand. All rights reserved.
                     </p>
-                    <div className="flex gap-6">
+                    <div className="flex items-center gap-6">
                         <Link
                             className="text-sm text-gray-500 hover:text-primary dark:text-gray-400"
                             href="#"

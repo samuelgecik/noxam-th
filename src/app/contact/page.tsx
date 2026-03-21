@@ -64,9 +64,11 @@ export default function ContactPage() {
                                                 Address
                                             </h4>
                                             <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                                123 Sukhumvit Road, Watthana
+                                                999/4 Moo 12
                                                 <br />
-                                                Bangkok 10110, Thailand
+                                                Nong Prue, BangLamung
+                                                <br />
+                                                Chonburi 20150, Thailand
                                             </p>
                                         </div>
                                     </div>
@@ -79,7 +81,7 @@ export default function ContactPage() {
                                                 Phone
                                             </h4>
                                             <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                                +66 2 123 4567
+                                                +66 (0)95 720 0812
                                             </p>
                                         </div>
                                     </div>
@@ -92,7 +94,7 @@ export default function ContactPage() {
                                                 Email
                                             </h4>
                                             <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                                contact@nextgenfloors.co.th
+                                                sales@nextgenfloor.co.th
                                             </p>
                                         </div>
                                     </div>
@@ -123,7 +125,7 @@ export default function ContactPage() {
                                 </h3>
                                 <div className="space-y-3">
                                     <a
-                                        href="https://wa.me/6621234567?text=Hello%2C%20I%27m%20interested%20in%20floor%20restoration%20services"
+                                        href="https://wa.me/66957200812?text=Hello%2C%20I%27m%20interested%20in%20floor%20restoration%20services"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-3 p-3 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 transition-colors group"
@@ -192,7 +194,7 @@ export default function ContactPage() {
                                     <span className="material-symbols-outlined text-lg">
                                         call
                                     </span>
-                                    Call Now: +66 2 123 4567
+                                    Call Now: +66 (0)95 720 0812
                                 </a>
                             </div>
                         </div>

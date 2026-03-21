@@ -11,7 +11,7 @@ export default function AboutPage() {
         <>
             {/* Hero Section */}
             <section
-                className="relative w-full min-h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+                className="relative w-full min-h-[400px] max-h-[400px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
                 style={{
                     backgroundImage:
                         "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVMqivcOsOm_L3l3n_H5rViHsSwqORw1lHIMjYcrwdrgDNX-plQoHd_sTEMjtQxBDhlkfpFJFC8Sh4-aX9g7u75_aQ9n-Yr020M9_V1Ay1tukPPuuGLFbN0esGV2tg6G7C7lHFWnzhBZ2pXHW5AoG2uOsICjlWijpFa7GZRQ4RsP-8zYRh4-fSaSp7OG--cY0uDSf5hP_aC1iYHDAFVfBq26LsARMdDOlvHeBm4sqQymNLrV6gRmsmTIsF8bLzLIJj3tTp1VFiz0S6')",

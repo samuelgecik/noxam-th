@@ -11,7 +11,7 @@ export default function ContactPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-primary to-blue-900 py-20">
+            <section className="relative bg-gradient-to-br from-primary to-blue-900 min-h-[400px] max-h-[400px] flex items-center justify-center">
                 <div
                     className="absolute inset-0 opacity-10"
                     style={{

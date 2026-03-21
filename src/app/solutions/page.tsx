@@ -11,7 +11,7 @@ export default function SolutionsPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-background-dark pt-20 pb-20 lg:pt-32 lg:pb-32">
+            <section className="relative overflow-hidden bg-background-dark min-h-[400px] max-h-[400px] flex items-center">
                 <div className="absolute inset-0 z-0 opacity-40">
                     <img
                         alt="Industrial floor background"

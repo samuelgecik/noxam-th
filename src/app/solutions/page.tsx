@@ -11,7 +11,7 @@ export default function SolutionsPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-background-dark min-h-[400px] max-h-[400px] flex items-center">
+            <section className="relative overflow-hidden bg-background-dark min-h-[400px] max-h-[400px] flex items-center justify-center">
                 <div className="absolute inset-0 z-0 opacity-40">
                     <img
                         alt="Industrial floor background"
@@ -20,16 +20,16 @@ export default function SolutionsPage() {
                     />
                 </div>
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-background-dark via-background-dark/90 to-transparent"></div>
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="max-w-3xl">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <div className="max-w-3xl mx-auto">
                         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl mb-6">
                             Innovative <span className="text-primary">Floor Solutions</span>
                         </h1>
-                        <p className="text-xl text-gray-300 max-w-2xl leading-relaxed mb-8">
+                        <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
                             Advanced restoration systems for modern environments.
                             High-performance PU coatings. Terrazzo polishing coming soon.
                         </p>
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-4 justify-center">
                             <Link
                                 className="flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-white shadow-md hover:bg-blue-700 transition-all hover:shadow-lg"
                                 href="/contact"

@@ -155,15 +155,15 @@ export default function ContactFormClient() {
     };
 
     const inputBaseClass =
-        "w-full rounded-lg border bg-white py-3 px-4 text-sm transition-colors dark:bg-gray-700 dark:text-white";
-    const inputNormalClass = `${inputBaseClass} border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-primary`;
+        "w-full rounded-lg border bg-white py-3 px-4 text-sm transition-colors";
+    const inputNormalClass = `${inputBaseClass} border-gray-300 focus:border-primary focus:ring-primary`;
     const inputErrorClass = `${inputBaseClass} border-red-500 focus:border-red-500 focus:ring-red-500`;
 
     return (
         <form className="space-y-6" onSubmit={handleSubmit} noValidate>
             {submitStatus === "success" && (
-                <div className="p-4 rounded-lg bg-green-50 border border-green-200 dark:bg-green-900/20 dark:border-green-800">
-                    <div className="flex items-center gap-2 text-green-700 dark:text-green-400">
+                <div className="p-4 rounded-lg bg-green-50 border border-green-200">
+                    <div className="flex items-center gap-2 text-green-700">
                         <span className="material-symbols-outlined">check_circle</span>
                         <p className="font-medium">Thank you! We&apos;ll contact you within 24 hours.</p>
                     </div>
@@ -171,8 +171,8 @@ export default function ContactFormClient() {
             )}
 
             {submitStatus === "error" && (
-                <div className="p-4 rounded-lg bg-red-50 border border-red-200 dark:bg-red-900/20 dark:border-red-800">
-                    <div className="flex items-center gap-2 text-red-700 dark:text-red-400">
+                <div className="p-4 rounded-lg bg-red-50 border border-red-200">
+                    <div className="flex items-center gap-2 text-red-700">
                         <span className="material-symbols-outlined">error</span>
                         <p className="font-medium">Something went wrong. Please try again.</p>
                     </div>
@@ -182,7 +182,7 @@ export default function ContactFormClient() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 mb-2"
                         htmlFor="name"
                     >
                         Full Name *
@@ -206,7 +206,7 @@ export default function ContactFormClient() {
                 </div>
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 mb-2"
                         htmlFor="email"
                     >
                         Email Address *
@@ -233,7 +233,7 @@ export default function ContactFormClient() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 mb-2"
                         htmlFor="phone"
                     >
                         Phone Number *
@@ -257,7 +257,7 @@ export default function ContactFormClient() {
                 </div>
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 mb-2"
                         htmlFor="company"
                     >
                         Company Name
@@ -277,7 +277,7 @@ export default function ContactFormClient() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 mb-2"
                         htmlFor="service"
                     >
                         Service Interest *
@@ -306,7 +306,7 @@ export default function ContactFormClient() {
                 </div>
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 mb-2"
                         htmlFor="size"
                     >
                         Approximate Area (sqm)
@@ -325,11 +325,11 @@ export default function ContactFormClient() {
 
             {/* File Upload */}
             <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                     Floor Photos (Optional)
                 </label>
                 <div
-                    className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-6 text-center hover:border-primary transition-colors cursor-pointer"
+                    className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-primary transition-colors cursor-pointer"
                     onClick={() => fileInputRef.current?.click()}
                 >
                     <input
@@ -343,11 +343,11 @@ export default function ContactFormClient() {
                     <span className="material-symbols-outlined text-gray-400 text-4xl mb-2">
                         add_photo_alternate
                     </span>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-600">
                         <span className="text-primary font-medium">Click to upload</span> or drag
                         and drop
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                    <p className="text-xs text-gray-500 mt-1">
                         JPG, PNG, WebP or HEIC (max 10MB each, up to 5 files)
                     </p>
                 </div>
@@ -358,7 +358,7 @@ export default function ContactFormClient() {
                         {files.map((file, index) => (
                             <div
                                 key={index}
-                                className="relative group rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700"
+                                className="relative group rounded-lg overflow-hidden border border-gray-200"
                             >
                                 <img
                                     src={URL.createObjectURL(file)}
@@ -388,7 +388,7 @@ export default function ContactFormClient() {
 
             <div>
                 <label
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                     htmlFor="message"
                 >
                     Project Details
@@ -424,7 +424,7 @@ export default function ContactFormClient() {
                 )}
             </button>
 
-            <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+            <p className="text-xs text-gray-500 text-center">
                 By submitting this form, you agree to our Privacy Policy. We&apos;ll respond
                 within 24 hours.
             </p>

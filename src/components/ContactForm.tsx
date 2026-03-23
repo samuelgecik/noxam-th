@@ -1,17 +1,17 @@
 export default function ContactForm() {
     return (
-        <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800">
+        <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
             <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label
-                            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            className="block text-sm font-medium text-gray-700 mb-1"
                             htmlFor="name"
                         >
                             Name
                         </label>
                         <input
-                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary"
                             id="name"
                             placeholder="John Doe"
                             type="text"
@@ -19,13 +19,13 @@ export default function ContactForm() {
                     </div>
                     <div>
                         <label
-                            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            className="block text-sm font-medium text-gray-700 mb-1"
                             htmlFor="phone"
                         >
                             Phone
                         </label>
                         <input
-                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary"
                             id="phone"
                             placeholder="+66 ..."
                             type="tel"
@@ -34,13 +34,13 @@ export default function ContactForm() {
                 </div>
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        className="block text-sm font-medium text-gray-700 mb-1"
                         htmlFor="email"
                     >
                         Email
                     </label>
                     <input
-                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary"
                         id="email"
                         placeholder="john@company.com"
                         type="email"
@@ -49,13 +49,13 @@ export default function ContactForm() {
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label
-                            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            className="block text-sm font-medium text-gray-700 mb-1"
                             htmlFor="type"
                         >
                             Floor Type
                         </label>
                         <select
-                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary"
                             id="type"
                         >
                             <option>Vinyl / PVC</option>
@@ -66,13 +66,13 @@ export default function ContactForm() {
                     </div>
                     <div>
                         <label
-                            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            className="block text-sm font-medium text-gray-700 mb-1"
                             htmlFor="size"
                         >
                             Area Size (Sqm)
                         </label>
                         <input
-                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary"
                             id="size"
                             placeholder="e.g. 500"
                             type="number"
@@ -81,13 +81,13 @@ export default function ContactForm() {
                 </div>
                 <div>
                     <label
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                        className="block text-sm font-medium text-gray-700 mb-1"
                         htmlFor="message"
                     >
                         Message
                     </label>
                     <textarea
-                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        className="w-full rounded-lg border-gray-300 bg-white py-2.5 px-3 text-sm focus:border-primary focus:ring-primary"
                         id="message"
                         placeholder="Tell us about your project..."
                         rows={3}

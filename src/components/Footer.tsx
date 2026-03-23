@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-white dark:bg-gray-950 pt-16 pb-8 border-t border-gray-100 dark:border-gray-800">
+        <footer className="bg-white pt-16 pb-8 border-t border-gray-100">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Company Info */}
@@ -14,11 +14,11 @@ export default function Footer() {
                                 className="h-10 w-auto"
                             />
                         </div>
-                        <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
+                        <p className="text-gray-600 mb-6 max-w-md">
                             Premium floor restoration services in Thailand. German technology,
                             expertise from Finland. PU Floor Coating and more. Terrazzo Polishing coming soon.
                         </p>
-                        <div className="space-y-3 text-gray-600 dark:text-gray-300">
+                        <div className="space-y-3 text-gray-600">
                             <div className="flex items-start gap-3">
                                 <span className="material-symbols-outlined text-primary mt-0.5">
                                     location_on
@@ -45,22 +45,22 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                        <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">
                             Solutions
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary">
                                     PU Floor Coating
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
-                                    Terrazzo Polishing <span className="text-amber-600 dark:text-amber-400">(Coming Soon)</span>
+                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary">
+                                    Terrazzo Polishing <span className="text-amber-600">(Coming Soon)</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                <Link href="/solutions" className="text-sm text-gray-600 hover:text-primary">
                                     Functional Additives
                                 </Link>
                             </li>
@@ -69,22 +69,22 @@ export default function Footer() {
 
                     {/* Company Links */}
                     <div>
-                        <h3 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                        <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">
                             Company
                         </h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/about" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                <Link href="/about" className="text-sm text-gray-600 hover:text-primary">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                <Link href="/contact" className="text-sm text-gray-600 hover:text-primary">
                                     Contact
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="text-sm text-gray-600 hover:text-primary dark:text-gray-400">
+                                <Link href="/contact" className="text-sm text-gray-600 hover:text-primary">
                                     Get a Quote
                                 </Link>
                             </li>
@@ -93,19 +93,19 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom bar */}
-                <div className="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-sm text-gray-500">
                         © 2026 Next Gen Floors Thailand. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
                         <Link
-                            className="text-sm text-gray-500 hover:text-primary dark:text-gray-400"
+                            className="text-sm text-gray-500 hover:text-primary"
                             href="#"
                         >
                             Privacy Policy
                         </Link>
                         <Link
-                            className="text-sm text-gray-500 hover:text-primary dark:text-gray-400"
+                            className="text-sm text-gray-500 hover:text-primary"
                             href="#"
                         >
                             Terms of Service

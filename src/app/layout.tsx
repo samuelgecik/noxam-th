@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
 	title: "NextGen Floor Solutions Thailand | PU Coating & Floor Restoration",
@@ -15,7 +14,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en">
 			<head>
 				<link rel="icon" href="/favicon.png" type="image/png" />
 				<link
@@ -26,28 +25,11 @@ export default function RootLayout({
 					href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap"
 					rel="stylesheet"
 				/>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-							(function() {
-								try {
-									var theme = localStorage.getItem('theme') || 'light';
-									document.documentElement.classList.add(theme);
-								} catch (e) {
-									document.documentElement.classList.add('light');
-								}
-							})();
-						`,
-					}}
-				/>
 			</head>
-			<body className="bg-background-light dark:bg-background-dark text-accent dark:text-white font-display antialiased">
-				<ThemeProvider>
-					<Header />
-					{children}
-				</ThemeProvider>
+			<body className="bg-background-light text-accent font-display antialiased">
+				<Header />
+				{children}
 			</body>
 		</html>
 	);
 }
-

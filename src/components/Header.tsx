@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -14,7 +13,6 @@ const navLinks = [
 
 export default function Header() {
     const pathname = usePathname();
-    const { theme, toggleTheme } = useTheme();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     // Close mobile menu on route change
@@ -29,7 +27,7 @@ export default function Header() {
     }, [mobileMenuOpen]);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/95">
+        <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
@@ -48,7 +46,7 @@ export default function Header() {
                             href={link.href}
                             className={`text-sm font-medium transition-colors ${pathname === link.href
                                 ? "text-primary"
-                                : "text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white"
+                                : "text-gray-600 hover:text-primary"
                                 }`}
                         >
                             {link.label}
@@ -56,28 +54,10 @@ export default function Header() {
                     ))}
                 </nav>
 
-                {/* Right side: Theme toggle + Language switcher + CTA */}
+                {/* Right side: Language switcher + CTA */}
                 <div className="flex items-center gap-4">
-                    {/* Theme Toggle Button */}
-                    <button
-                        onClick={toggleTheme}
-                        className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                        title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-                        aria-label="Toggle theme"
-                    >
-                        {theme === "light" ? (
-                            <span className="material-symbols-outlined text-gray-600">
-                                dark_mode
-                            </span>
-                        ) : (
-                            <span className="material-symbols-outlined text-yellow-400">
-                                light_mode
-                            </span>
-                        )}
-                    </button>
-
                     {/* Language Switcher */}
-                    <div className="hidden sm:flex items-center gap-1 border-l border-gray-200 dark:border-gray-700 pl-4">
+                    <div className="hidden sm:flex items-center gap-1 border-l border-gray-200 pl-4">
                         <button
                             className="flex items-center gap-1 px-2 py-1.5 rounded-md bg-primary/10 border border-primary/20 transition-colors"
                             title="English"
@@ -90,7 +70,7 @@ export default function Header() {
                             <span className="text-xs font-bold text-primary">ENG</span>
                         </button>
                         <button
-                            className="flex items-center gap-1 px-2 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            className="flex items-center gap-1 px-2 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
                             title="ภาษาไทย"
                         >
                             <img
@@ -98,7 +78,7 @@ export default function Header() {
                                 alt="ไทย"
                                 className="w-5 h-auto rounded-sm"
                             />
-                            <span className="text-xs font-bold text-gray-600 dark:text-gray-300">
+                            <span className="text-xs font-bold text-gray-600">
                                 ไทย
                             </span>
                         </button>
@@ -114,7 +94,7 @@ export default function Header() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2 text-gray-600 hover:text-gray-900 dark:text-gray-300"
+                        className="md:hidden p-2 text-gray-600 hover:text-gray-900"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                         aria-expanded={mobileMenuOpen}
@@ -136,7 +116,7 @@ export default function Header() {
 
             {/* Mobile Menu Drawer */}
             <nav
-                className={`fixed top-16 right-0 z-50 h-[calc(100dvh-4rem)] w-72 bg-white dark:bg-gray-900 shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
+                className={`fixed top-16 right-0 z-50 h-[calc(100dvh-4rem)] w-72 bg-white shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
                     mobileMenuOpen ? "translate-x-0" : "translate-x-full"
                 }`}
             >
@@ -148,7 +128,7 @@ export default function Header() {
                             className={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                                 pathname === link.href
                                     ? "bg-primary/10 text-primary"
-                                    : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+                                    : "text-gray-700 hover:bg-gray-100"
                             }`}
                         >
                             {link.label}
@@ -156,7 +136,7 @@ export default function Header() {
                     ))}
 
                     {/* Mobile Language Switcher */}
-                    <div className="flex items-center gap-2 mt-4 px-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div className="flex items-center gap-2 mt-4 px-4 pt-4 border-t border-gray-200">
                         <button
                             className="flex items-center gap-1 px-2 py-1.5 rounded-md bg-primary/10 border border-primary/20 transition-colors"
                             title="English"
@@ -169,7 +149,7 @@ export default function Header() {
                             <span className="text-xs font-bold text-primary">ENG</span>
                         </button>
                         <button
-                            className="flex items-center gap-1 px-2 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            className="flex items-center gap-1 px-2 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
                             title="ภาษาไทย"
                         >
                             <img
@@ -177,7 +157,7 @@ export default function Header() {
                                 alt="ไทย"
                                 className="w-5 h-auto rounded-sm"
                             />
-                            <span className="text-xs font-bold text-gray-600 dark:text-gray-300">
+                            <span className="text-xs font-bold text-gray-600">
                                 ไทย
                             </span>
                         </button>
@@ -195,4 +175,3 @@ export default function Header() {
         </header>
     );
 }
-

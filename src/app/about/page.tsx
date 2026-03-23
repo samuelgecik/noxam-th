@@ -30,64 +30,64 @@ export default function AboutPage() {
             </section>
 
             {/* Certifications Section */}
-            <section className="py-16 bg-white dark:bg-gray-900">
+            <section className="py-16 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                             Quality &amp; Certifications
                         </h2>
-                        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+                        <p className="mt-4 text-lg text-gray-600">
                             Our commitment to excellence is backed by international standards.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-                            <div className="flex size-16 items-center justify-center rounded-full bg-blue-100 text-primary mx-auto mb-4 dark:bg-blue-900/30">
+                        <div className="text-center p-6 rounded-xl bg-gray-50 border border-gray-100">
+                            <div className="flex size-16 items-center justify-center rounded-full bg-blue-100 text-primary mx-auto mb-4">
                                 <span className="material-symbols-outlined text-3xl">
                                     verified
                                 </span>
                             </div>
-                            <h3 className="font-bold text-gray-900 dark:text-white">
+                            <h3 className="font-bold text-gray-900">
                                 ISO 9001:2015
                             </h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                            <p className="text-sm text-gray-600 mt-2">
                                 Quality Management
                             </p>
                         </div>
-                        <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-                            <div className="flex size-16 items-center justify-center rounded-full bg-green-100 text-green-600 mx-auto mb-4 dark:bg-green-900/30">
+                        <div className="text-center p-6 rounded-xl bg-gray-50 border border-gray-100">
+                            <div className="flex size-16 items-center justify-center rounded-full bg-green-100 text-green-600 mx-auto mb-4">
                                 <span className="material-symbols-outlined text-3xl">eco</span>
                             </div>
-                            <h3 className="font-bold text-gray-900 dark:text-white">
+                            <h3 className="font-bold text-gray-900">
                                 ISO 14001:2015
                             </h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                            <p className="text-sm text-gray-600 mt-2">
                                 Environmental Management
                             </p>
                         </div>
-                        <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-                            <div className="flex size-16 items-center justify-center rounded-full bg-orange-100 text-orange-600 mx-auto mb-4 dark:bg-orange-900/30">
+                        <div className="text-center p-6 rounded-xl bg-gray-50 border border-gray-100">
+                            <div className="flex size-16 items-center justify-center rounded-full bg-orange-100 text-orange-600 mx-auto mb-4">
                                 <span className="material-symbols-outlined text-3xl">
                                     shield
                                 </span>
                             </div>
-                            <h3 className="font-bold text-gray-900 dark:text-white">
+                            <h3 className="font-bold text-gray-900">
                                 ISO 45001:2018
                             </h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                            <p className="text-sm text-gray-600 mt-2">
                                 Health &amp; Safety
                             </p>
                         </div>
-                        <div className="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-                            <div className="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4 dark:bg-blue-900/30">
+                        <div className="text-center p-6 rounded-xl bg-gray-50 border border-gray-100">
+                            <div className="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
                                 <span className="material-symbols-outlined text-3xl">
                                     workspace_premium
                                 </span>
                             </div>
-                            <h3 className="font-bold text-gray-900 dark:text-white">
+                            <h3 className="font-bold text-gray-900">
                                 Dr. Schutz
                             </h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                            <p className="text-sm text-gray-600 mt-2">
                                 Certified Applicator
                             </p>
                         </div>
@@ -96,18 +96,18 @@ export default function AboutPage() {
             </section>
 
             {/* Our References Section */}
-            <section className="py-16 bg-background-off-white dark:bg-background-dark">
+            <section className="py-16 bg-background-off-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                             Our References
                         </h2>
-                        <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
+                        <p className="mt-2 text-lg text-gray-600">
                             Transformations that speak for themselves.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="rounded-2xl overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="rounded-2xl overflow-hidden shadow-md bg-white border border-gray-100">
                             <div className="aspect-[4/3] relative">
                                 <img
                                     alt="Before and after of a commercial floor restoration"
@@ -119,15 +119,15 @@ export default function AboutPage() {
                                 </div>
                             </div>
                             <div className="p-5">
-                                <h3 className="font-bold text-gray-900 dark:text-white">
+                                <h3 className="font-bold text-gray-900">
                                     Warehouse Facility
                                 </h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                                <p className="text-sm text-gray-500 mt-1">
                                     Full PU coating restoration
                                 </p>
                             </div>
                         </div>
-                        <div className="rounded-2xl overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="rounded-2xl overflow-hidden shadow-md bg-white border border-gray-100">
                             <div className="aspect-[4/3] relative">
                                 <img
                                     alt="Terrazzo floor polishing result"
@@ -139,15 +139,15 @@ export default function AboutPage() {
                                 </div>
                             </div>
                             <div className="p-5">
-                                <h3 className="font-bold text-gray-900 dark:text-white">
+                                <h3 className="font-bold text-gray-900">
                                     Shopping Mall
                                 </h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                                <p className="text-sm text-gray-500 mt-1">
                                     Terrazzo polishing restoration
                                 </p>
                             </div>
                         </div>
-                        <div className="rounded-2xl overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="rounded-2xl overflow-hidden shadow-md bg-white border border-gray-100">
                             <div className="aspect-[4/3] relative">
                                 <img
                                     alt="Hospital floor restoration"
@@ -159,10 +159,10 @@ export default function AboutPage() {
                                 </div>
                             </div>
                             <div className="p-5">
-                                <h3 className="font-bold text-gray-900 dark:text-white">
+                                <h3 className="font-bold text-gray-900">
                                     Hospital Corridor
                                 </h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                                <p className="text-sm text-gray-500 mt-1">
                                     Antimicrobial PU coating
                                 </p>
                             </div>
@@ -172,15 +172,15 @@ export default function AboutPage() {
             </section>
 
             {/* Testimonials Section */}
-            <section className="py-16 bg-white dark:bg-gray-900">
+            <section className="py-16 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                             What Our Clients Say
                         </h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="p-6 rounded-xl bg-gray-50 border border-gray-100">
                             <div className="flex items-center gap-1 mb-4 text-yellow-400">
                                 <span className="material-symbols-outlined">star</span>
                                 <span className="material-symbols-outlined">star</span>
@@ -188,7 +188,7 @@ export default function AboutPage() {
                                 <span className="material-symbols-outlined">star</span>
                                 <span className="material-symbols-outlined">star</span>
                             </div>
-                            <p className="text-gray-600 dark:text-gray-300 mb-6">
+                            <p className="text-gray-600 mb-6">
                                 &quot;The floor restoration exceeded our expectations. Minimal
                                 downtime and the results are stunning. Highly recommended for
                                 any commercial facility.&quot;
@@ -198,16 +198,16 @@ export default function AboutPage() {
                                     SK
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 dark:text-white">
+                                    <h4 className="font-bold text-gray-900">
                                         Somchai K.
                                     </h4>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                                    <p className="text-sm text-gray-500">
                                         Facility Manager, Bangkok
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="p-6 rounded-xl bg-gray-50 border border-gray-100">
                             <div className="flex items-center gap-1 mb-4 text-yellow-400">
                                 <span className="material-symbols-outlined">star</span>
                                 <span className="material-symbols-outlined">star</span>
@@ -215,7 +215,7 @@ export default function AboutPage() {
                                 <span className="material-symbols-outlined">star</span>
                                 <span className="material-symbols-outlined">star</span>
                             </div>
-                            <p className="text-gray-600 dark:text-gray-300 mb-6">
+                            <p className="text-gray-600 mb-6">
                                 &quot;Professional team, high-quality work. The PU coating has
                                 made our factory floor much easier to maintain and looks brand
                                 new.&quot;
@@ -225,16 +225,16 @@ export default function AboutPage() {
                                     NP
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 dark:text-white">
+                                    <h4 className="font-bold text-gray-900">
                                         Nattaporn P.
                                     </h4>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                                    <p className="text-sm text-gray-500">
                                         Operations Director
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="p-6 rounded-xl bg-gray-50 border border-gray-100">
                             <div className="flex items-center gap-1 mb-4 text-yellow-400">
                                 <span className="material-symbols-outlined">star</span>
                                 <span className="material-symbols-outlined">star</span>
@@ -242,7 +242,7 @@ export default function AboutPage() {
                                 <span className="material-symbols-outlined">star</span>
                                 <span className="material-symbols-outlined">star</span>
                             </div>
-                            <p className="text-gray-600 dark:text-gray-300 mb-6">
+                            <p className="text-gray-600 mb-6">
                                 &quot;We had our 30-year-old terrazzo floor restored. It now
                                 looks better than when it was first installed. Amazing
                                 work!&quot;
@@ -252,10 +252,10 @@ export default function AboutPage() {
                                     WL
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 dark:text-white">
+                                    <h4 className="font-bold text-gray-900">
                                         Warunee L.
                                     </h4>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                                    <p className="text-sm text-gray-500">
                                         Property Owner
                                     </p>
                                 </div>
@@ -266,60 +266,60 @@ export default function AboutPage() {
             </section>
 
             {/* Team Training Section */}
-            <section className="py-16 bg-primary/5 dark:bg-background-dark border-y border-gray-200 dark:border-gray-800">
+            <section className="py-16 bg-primary/5 border-y border-gray-200">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
                                 German-Trained Excellence
                             </h2>
-                            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                            <p className="text-lg text-gray-600 mb-6">
                                 Our technicians undergo rigorous training programs directly from
                                 Dr. Schutz in Germany and our operations team brings extensive
                                 experience from Finland.
                             </p>
                             <div className="space-y-4">
                                 <div className="flex items-start gap-4">
-                                    <div className="p-2 bg-white rounded-lg shadow-sm text-primary dark:bg-gray-800">
+                                    <div className="p-2 bg-white rounded-lg shadow-sm text-primary">
                                         <span className="material-symbols-outlined">school</span>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900 dark:text-white">
+                                        <h4 className="font-bold text-gray-900">
                                             Certified Training
                                         </h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                        <p className="text-sm text-gray-600">
                                             Regular workshops and certifications from industry
                                             leaders.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="p-2 bg-white rounded-lg shadow-sm text-primary dark:bg-gray-800">
+                                    <div className="p-2 bg-white rounded-lg shadow-sm text-primary">
                                         <span className="material-symbols-outlined">
                                             engineering
                                         </span>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900 dark:text-white">
+                                        <h4 className="font-bold text-gray-900">
                                             Finnish Expertise
                                         </h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                        <p className="text-sm text-gray-600">
                                             Decades of experience in Nordic floor restoration brought
                                             to Thailand.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="p-2 bg-white rounded-lg shadow-sm text-primary dark:bg-gray-800">
+                                    <div className="p-2 bg-white rounded-lg shadow-sm text-primary">
                                         <span className="material-symbols-outlined">
                                             precision_manufacturing
                                         </span>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900 dark:text-white">
+                                        <h4 className="font-bold text-gray-900">
                                             Latest Equipment
                                         </h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                                        <p className="text-sm text-gray-600">
                                             State-of-the-art machinery for precise and efficient
                                             restoration.
                                         </p>

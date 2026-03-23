@@ -43,21 +43,21 @@ export default function SolutionsPage() {
 
             {/* Services Section */}
             <section
-                className="py-20 bg-background-off-white dark:bg-background-dark"
+                className="py-20 bg-background-off-white"
                 id="services"
             >
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12 text-center max-w-3xl mx-auto">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                             Our Services
                         </h2>
-                        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+                        <p className="mt-4 text-lg text-gray-600">
                             Comprehensive floor care engineered for longevity and performance.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* PU Floor Coating */}
-                        <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
                             <div className="h-48 w-full overflow-hidden">
                                 <img
                                     alt="PU Floor Coating"
@@ -67,21 +67,21 @@ export default function SolutionsPage() {
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+                                    <div className="p-2 bg-blue-50 rounded-lg text-primary">
                                         <span className="material-symbols-outlined">
                                             format_paint
                                         </span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                                    <h3 className="text-xl font-bold text-gray-900">
                                         PU Floor Coating
                                     </h3>
                                 </div>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
+                                <p className="text-gray-600 text-sm mb-6">
                                     Complete surface renewal without removal. High-performance
                                     sealer system.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                                    <div className="flex items-start gap-2 text-sm text-gray-700">
                                         <span className="material-symbols-outlined text-green-500 text-base mt-0.5">
                                             verified_user
                                         </span>
@@ -89,7 +89,7 @@ export default function SolutionsPage() {
                                             <strong>Dr. Schutz Certified</strong> Application
                                         </span>
                                     </div>
-                                    <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                                    <div className="flex items-start gap-2 text-sm text-gray-700">
                                         <span className="material-symbols-outlined text-primary text-base mt-0.5">
                                             autorenew
                                         </span>
@@ -100,10 +100,10 @@ export default function SolutionsPage() {
                         </div>
 
                         {/* Terrazzo Polishing */}
-                        <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
                             {/* Coming Soon Badge */}
                             <div className="absolute top-4 right-4 z-10">
-                                <span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                                <span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800">
                                     <span className="material-symbols-outlined text-sm mr-1">schedule</span>
                                     Coming Soon
                                 </span>
@@ -117,21 +117,21 @@ export default function SolutionsPage() {
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+                                    <div className="p-2 bg-blue-50 rounded-lg text-primary">
                                         <span className="material-symbols-outlined">
                                             auto_awesome
                                         </span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                                    <h3 className="text-xl font-bold text-gray-900">
                                         Terrazzo Polishing
                                     </h3>
                                 </div>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
+                                <p className="text-gray-600 text-sm mb-6">
                                     Sustainable diamond polishing to restore natural stone
                                     brilliance.
                                 </p>
                                 <div className="space-y-3 mb-6">
-                                    <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                                    <div className="flex items-start gap-2 text-sm text-gray-700">
                                         <span className="material-symbols-outlined text-primary text-base mt-0.5">
                                             shutter_speed
                                         </span>
@@ -139,7 +139,7 @@ export default function SolutionsPage() {
                                             <strong>Mirror-Finish</strong> Restoration
                                         </span>
                                     </div>
-                                    <div className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                                    <div className="flex items-start gap-2 text-sm text-gray-700">
                                         <span className="material-symbols-outlined text-green-500 text-base mt-0.5">
                                             block
                                         </span>
@@ -150,7 +150,7 @@ export default function SolutionsPage() {
                         </div>
 
                         {/* Functional Additives */}
-                        <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                        <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
                             <div className="h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center relative">
                                 <img
                                     alt="Laboratory science"
@@ -161,39 +161,39 @@ export default function SolutionsPage() {
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center gap-3 mb-4">
-                                    <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+                                    <div className="p-2 bg-blue-50 rounded-lg text-primary">
                                         <span className="material-symbols-outlined">science</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                                    <h3 className="text-xl font-bold text-gray-900">
                                         Functional Additives
                                     </h3>
                                 </div>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                                <p className="text-gray-600 text-sm mb-4">
                                     Enhance your floor&apos;s capabilities with specialized
                                     protective additives.
                                 </p>
                                 <div className="grid grid-cols-1 gap-2">
-                                    <div className="flex items-center gap-2 p-2 rounded bg-gray-50 dark:bg-gray-700/50">
+                                    <div className="flex items-center gap-2 p-2 rounded bg-gray-50">
                                         <span className="material-symbols-outlined text-primary text-sm">
                                             sanitizer
                                         </span>
-                                        <span className="text-xs font-bold text-gray-800 dark:text-gray-200">
+                                        <span className="text-xs font-bold text-gray-800">
                                             Antimicrobial (VIR-O-BAC)
                                         </span>
                                     </div>
-                                    <div className="flex items-center gap-2 p-2 rounded bg-gray-50 dark:bg-gray-700/50">
+                                    <div className="flex items-center gap-2 p-2 rounded bg-gray-50">
                                         <span className="material-symbols-outlined text-primary text-sm">
                                             directions_walk
                                         </span>
-                                        <span className="text-xs font-bold text-gray-800 dark:text-gray-200">
+                                        <span className="text-xs font-bold text-gray-800">
                                             Anti-Slip (SLIPNOMORE)
                                         </span>
                                     </div>
-                                    <div className="flex items-center gap-2 p-2 rounded bg-gray-50 dark:bg-gray-700/50">
+                                    <div className="flex items-center gap-2 p-2 rounded bg-gray-50">
                                         <span className="material-symbols-outlined text-primary text-sm">
                                             electrical_services
                                         </span>
-                                        <span className="text-xs font-bold text-gray-800 dark:text-gray-200">
+                                        <span className="text-xs font-bold text-gray-800">
                                             ESD Protection
                                         </span>
                                     </div>
@@ -205,7 +205,7 @@ export default function SolutionsPage() {
             </section>
 
             {/* Why PU Technology */}
-            <section className="py-20 bg-white dark:bg-gray-900" id="technology">
+            <section className="py-20 bg-white" id="technology">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -213,74 +213,74 @@ export default function SolutionsPage() {
                                 <span className="text-primary font-bold tracking-wider text-sm uppercase">
                                     Comparative Analysis
                                 </span>
-                                <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mt-2">
+                                <h2 className="text-3xl font-bold tracking-tight text-gray-900 mt-2">
                                     Why PU Technology?
                                 </h2>
-                                <p className="mt-4 text-gray-600 dark:text-gray-400">
+                                <p className="mt-4 text-gray-600">
                                     Our PU Sealer outperforms traditional solutions like Epoxy and
                                     Wax in critical industrial applications.
                                 </p>
                             </div>
                             <div className="space-y-6">
-                                <div className="flex gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                                <div className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
                                     <div className="flex-shrink-0 mt-1">
-                                        <div className="flex size-10 items-center justify-center rounded-full bg-blue-100 text-primary dark:bg-blue-900/30 dark:text-blue-300">
+                                        <div className="flex size-10 items-center justify-center rounded-full bg-blue-100 text-primary">
                                             <span className="material-symbols-outlined">
                                                 architecture
                                             </span>
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                                        <h4 className="text-lg font-bold text-gray-900">
                                             Flexibility &amp; Durability
                                         </h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                        <p className="text-sm text-gray-600 mt-1">
                                             <strong className="text-primary">PU:</strong> High
                                             elasticity, resists cracking under stress.
                                         </p>
-                                        <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                                        <p className="text-sm text-gray-500 mt-1">
                                             <span className="line-through">Epoxy:</span> Brittle,
                                             prone to cracking.
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                                <div className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
                                     <div className="flex-shrink-0 mt-1">
-                                        <div className="flex size-10 items-center justify-center rounded-full bg-blue-100 text-primary dark:bg-blue-900/30 dark:text-blue-300">
+                                        <div className="flex size-10 items-center justify-center rounded-full bg-blue-100 text-primary">
                                             <span className="material-symbols-outlined">
                                                 wb_sunny
                                             </span>
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                                        <h4 className="text-lg font-bold text-gray-900">
                                             UV Stability
                                         </h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                        <p className="text-sm text-gray-600 mt-1">
                                             <strong className="text-primary">PU:</strong> 100%
                                             Aliphatic. Does not yellow over time.
                                         </p>
-                                        <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                                        <p className="text-sm text-gray-500 mt-1">
                                             <span className="line-through">Epoxy:</span> Yellows
                                             significantly with UV exposure.
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                                <div className="flex gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
                                     <div className="flex-shrink-0 mt-1">
-                                        <div className="flex size-10 items-center justify-center rounded-full bg-blue-100 text-primary dark:bg-blue-900/30 dark:text-blue-300">
+                                        <div className="flex size-10 items-center justify-center rounded-full bg-blue-100 text-primary">
                                             <span className="material-symbols-outlined">timer</span>
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                                        <h4 className="text-lg font-bold text-gray-900">
                                             Fast Curing
                                         </h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                        <p className="text-sm text-gray-600 mt-1">
                                             <strong className="text-primary">PU:</strong> Walkable in
                                             hours, fully cured overnight.
                                         </p>
-                                        <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                                        <p className="text-sm text-gray-500 mt-1">
                                             <span className="line-through">Epoxy:</span> Requires 3-7
                                             days for full cure.
                                         </p>
@@ -338,15 +338,15 @@ export default function SolutionsPage() {
 
             {/* Sectors Section */}
             <section
-                className="py-20 bg-background-off-white dark:bg-background-dark"
+                className="py-20 bg-background-off-white"
                 id="sectors"
             >
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                             Sectors We Serve
                         </h2>
-                        <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
+                        <p className="mt-2 text-lg text-gray-600">
                             Tailored solutions for specific industry requirements.
                         </p>
                     </div>

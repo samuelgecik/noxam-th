@@ -4,9 +4,6 @@
 
 @import "tailwindcss";
 
-/* Configure Tailwind v4 to use class-based dark mode */
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -30,12 +27,6 @@
   --color-secondary: #accaea;
   --font-display: "Manrope", "Noto Sans Thai", sans-serif;
   --font-body: "Manrope", "Noto Sans Thai", sans-serif;
-}
-
-/* Class-based dark mode (toggle required) */
-:root.dark {
-  --background: #0f1a23;
-  --foreground: #ededed;
 }
 
 body {

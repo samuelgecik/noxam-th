@@ -32,13 +32,13 @@ export default function ContactPage() {
             </section>
 
             {/* Main Content */}
-            <section className="py-16 bg-white dark:bg-gray-900">
+            <section className="py-16 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-12 gap-12">
                         {/* Contact Form */}
                         <div className="lg:col-span-7">
-                            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-gray-700">
-                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                                <h2 className="text-2xl font-bold text-gray-900 mb-6">
                                     Request a Quote
                                 </h2>
                                 <ContactFormClient />
@@ -48,22 +48,22 @@ export default function ContactPage() {
                         {/* Contact Info Sidebar */}
                         <div className="lg:col-span-5 flex flex-col gap-6">
                             {/* Thailand Office */}
-                            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700">
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                                <h3 className="text-xl font-bold text-gray-900 mb-4">
                                     Thailand Office
                                 </h3>
                                 <div className="space-y-4">
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 bg-white dark:bg-gray-700 rounded-lg shadow-sm text-primary">
+                                        <div className="p-2 bg-white rounded-lg shadow-sm text-primary">
                                             <span className="material-symbols-outlined">
                                                 location_on
                                             </span>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900 dark:text-white text-sm">
+                                            <h4 className="font-bold text-gray-900 text-sm">
                                                 Address
                                             </h4>
-                                            <p className="text-gray-600 dark:text-gray-300 text-sm">
+                                            <p className="text-gray-600 text-sm">
                                                 999/4 Moo 12
                                                 <br />
                                                 Nong Prue, BangLamung
@@ -73,42 +73,42 @@ export default function ContactPage() {
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 bg-white dark:bg-gray-700 rounded-lg shadow-sm text-primary">
+                                        <div className="p-2 bg-white rounded-lg shadow-sm text-primary">
                                             <span className="material-symbols-outlined">call</span>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900 dark:text-white text-sm">
+                                            <h4 className="font-bold text-gray-900 text-sm">
                                                 Phone
                                             </h4>
-                                            <p className="text-gray-600 dark:text-gray-300 text-sm">
+                                            <p className="text-gray-600 text-sm">
                                                 +66 (0)95 720 0812
                                             </p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 bg-white dark:bg-gray-700 rounded-lg shadow-sm text-primary">
+                                        <div className="p-2 bg-white rounded-lg shadow-sm text-primary">
                                             <span className="material-symbols-outlined">mail</span>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900 dark:text-white text-sm">
+                                            <h4 className="font-bold text-gray-900 text-sm">
                                                 Email
                                             </h4>
-                                            <p className="text-gray-600 dark:text-gray-300 text-sm">
+                                            <p className="text-gray-600 text-sm">
                                                 sales@nextgenfloor.co.th
                                             </p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
-                                        <div className="p-2 bg-white dark:bg-gray-700 rounded-lg shadow-sm text-primary">
+                                        <div className="p-2 bg-white rounded-lg shadow-sm text-primary">
                                             <span className="material-symbols-outlined">
                                                 schedule
                                             </span>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900 dark:text-white text-sm">
+                                            <h4 className="font-bold text-gray-900 text-sm">
                                                 Business Hours
                                             </h4>
-                                            <p className="text-gray-600 dark:text-gray-300 text-sm">
+                                            <p className="text-gray-600 text-sm">
                                                 Monday - Friday: 8:00 AM - 6:00 PM
                                                 <br />
                                                 Saturday: 9:00 AM - 3:00 PM
@@ -119,8 +119,8 @@ export default function ContactPage() {
                             </div>
 
                             {/* WhatsApp & LINE Contact */}
-                            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700">
-                                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+                            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                                <h3 className="text-lg font-bold text-gray-900 mb-4">
                                     Chat With Us
                                 </h3>
                                 <div className="space-y-3">
@@ -137,7 +137,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-[#25D366] text-sm">WhatsApp</p>
-                                            <p className="text-xs text-gray-600 dark:text-gray-400">Chat instantly</p>
+                                            <p className="text-xs text-gray-600">Chat instantly</p>
                                         </div>
                                         <span className="material-symbols-outlined text-[#25D366] ml-auto group-hover:translate-x-1 transition-transform">
                                             arrow_forward
@@ -156,7 +156,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-[#00B900] text-sm">LINE</p>
-                                            <p className="text-xs text-gray-600 dark:text-gray-400">@nextgenfloors</p>
+                                            <p className="text-xs text-gray-600">@nextgenfloors</p>
                                         </div>
                                         <span className="material-symbols-outlined text-[#00B900] ml-auto group-hover:translate-x-1 transition-transform">
                                             arrow_forward
@@ -166,7 +166,7 @@ export default function ContactPage() {
                             </div>
 
                             {/* Google Maps */}
-                            <div className="relative h-64 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
+                            <div className="relative h-64 rounded-2xl overflow-hidden border border-gray-200">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5402061489777!2d100.56236907515826!3d13.743399797567445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee9c1234567%3A0xabcdef1234567890!2sSukhumvit%20Road%2C%20Bangkok!5e0!3m2!1sen!2sth!4v1707234567890!5m2!1sen!2sth"
                                     width="100%"

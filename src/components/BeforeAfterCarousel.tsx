@@ -1,77 +1,79 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import ImageComparisonSlider from "./ImageComparisonSlider";
 
 interface ProjectItem {
     id: string;
-    title: string;
-    description: string;
+    titleKey: string;
+    descriptionKey: string;
     beforeImage: string;
     afterImage: string;
-    category: string;
+    categoryKey: string;
 }
 
 const projects: ProjectItem[] = [
     {
         id: "warehouse",
-        title: "Warehouse Facility",
-        description: "Full PU coating restoration for industrial space",
+        titleKey: "project_warehouse_title",
+        descriptionKey: "project_warehouse_desc",
         beforeImage: "/renovations/warehouse_before.jpeg",
         afterImage: "/renovations/warehouse_after.jpeg",
-        category: "Industrial",
+        categoryKey: "project_category_industrial",
     },
     {
         id: "locker-room",
-        title: "Locker Room Renovation",
-        description: "Complete floor refurbishment with antimicrobial coating",
+        titleKey: "project_locker_title",
+        descriptionKey: "project_locker_desc",
         beforeImage: "/renovations/Locker_Room_Renovation_Before.jpg",
         afterImage: "/renovations/Locker_Room_Renovation_After.jpg",
-        category: "Commercial",
+        categoryKey: "project_category_commercial",
     },
     {
         id: "office-floor",
-        title: "Office Floor Corner",
-        description: "Premium finish restoration for corporate space",
+        titleKey: "project_office_floor_title",
+        descriptionKey: "project_office_floor_desc",
         beforeImage: "/renovations/Office_Floor_Corner_Before.JPG",
         afterImage: "/renovations/Office_Floor_Corner_Finished.jpg",
-        category: "Commercial",
+        categoryKey: "project_category_commercial",
     },
     {
         id: "office-room",
-        title: "Office Room Overview",
-        description: "Full room floor transformation",
+        titleKey: "project_office_room_title",
+        descriptionKey: "project_office_room_desc",
         beforeImage: "/renovations/Office_Room_Overview_Before.JPG",
         afterImage: "/renovations/Office_Room_Overview_Finished.jpg",
-        category: "Commercial",
+        categoryKey: "project_category_commercial",
     },
     {
         id: "hallway",
-        title: "Hallway Restoration",
-        description: "Tiled floor to modern grey coating upgrade",
+        titleKey: "project_hallway_title",
+        descriptionKey: "project_hallway_desc",
         beforeImage: "/renovations/Hallway_Tiled_Floor_Before.jpg",
         afterImage: "/renovations/Hallway_Grey_Coating_After.jpg",
-        category: "Commercial",
+        categoryKey: "project_category_commercial",
     },
     {
         id: "doorway",
-        title: "Doorway Threshold",
-        description: "Worn concrete to freshly painted finish",
+        titleKey: "project_doorway_title",
+        descriptionKey: "project_doorway_desc",
         beforeImage: "/renovations/Doorway_Threshold_Worn_Concrete_Before.jpg",
         afterImage: "/renovations/Doorway_Threshold_Freshly_Painted_After.jpg",
-        category: "Industrial",
+        categoryKey: "project_category_industrial",
     },
     {
         id: "vinyl-floor",
-        title: "Office Vinyl Floor",
-        description: "Scuffed vinyl stripped and cleaned professionally",
+        titleKey: "project_vinyl_title",
+        descriptionKey: "project_vinyl_desc",
         beforeImage: "/renovations/Office_Vinyl_Floor_Scuffed_Before.jpg",
         afterImage: "/renovations/Office_Vinyl_Floor_Stripped_Clean_After.jpg",
-        category: "Commercial",
+        categoryKey: "project_category_commercial",
     },
 ];
 
 export default function BeforeAfterCarousel() {
+    const t = useTranslations("home");
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPrevious = () => {
@@ -113,8 +115,9 @@ export default function BeforeAfterCarousel() {
                     key={currentProject.id}
                     beforeImage={currentProject.beforeImage}
                     afterImage={currentProject.afterImage}
-                    beforeLabel="Before"
-                    afterLabel="After"
+                    beforeLabel={t("carousel_before")}
+                    afterLabel={t("carousel_after")}
+                    dragLabel={t("drag_to_compare")}
                 />
 
                 {/* Project Info Overlay */}
@@ -122,13 +125,13 @@ export default function BeforeAfterCarousel() {
                     <div className="flex items-end justify-between">
                         <div>
                             <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
-                                {currentProject.category}
+                                {t(currentProject.categoryKey)}
                             </span>
                             <h3 className="text-xl md:text-2xl font-bold text-white">
-                                {currentProject.title}
+                                {t(currentProject.titleKey)}
                             </h3>
                             <p className="text-gray-300 text-sm mt-1">
-                                {currentProject.description}
+                                {t(currentProject.descriptionKey)}
                             </p>
                         </div>
                         <div className="text-white/70 text-sm font-medium">
@@ -149,11 +152,11 @@ export default function BeforeAfterCarousel() {
                             ? "ring-2 ring-primary ring-offset-2 scale-105"
                             : "opacity-60 hover:opacity-100"
                             }`}
-                        aria-label={`View ${project.title}`}
+                        aria-label={`View ${t(project.titleKey)}`}
                     >
                         <img
                             src={project.afterImage}
-                            alt={project.title}
+                            alt={t(project.titleKey)}
                             className="w-full h-full object-cover"
                         />
                     </button>

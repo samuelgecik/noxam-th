@@ -1,9 +1,29 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 import Footer from "@/components/Footer";
 import ImageComparisonSlider from "@/components/ImageComparisonSlider";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "home" });
+	return {
+		title: t("meta_title"),
+		description: t("meta_description"),
+		alternates: {
+			languages: { en: "/en", th: "/th" },
+		},
+	};
+}
+
 export default function Home() {
+	const t = useTranslations("home");
 	return (
 		<>
 			{/* Hero Section */}
@@ -22,36 +42,35 @@ export default function Home() {
 							<div className="flex flex-wrap gap-2 mb-2">
 								<div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-sm font-medium text-primary w-fit">
 									<span className="flex size-2 rounded-full bg-primary mr-2"></span>{" "}
-									Now Available in Thailand
+									{t("hero_badge_available")}
 								</div>
 								<div className="inline-flex items-center rounded-full border border-green-100 bg-green-50 px-3 py-1 text-sm font-medium text-green-700 w-fit">
 									<span className="material-symbols-outlined text-sm mr-1">
 										wb_sunny
 									</span>{" "}
-									Suitable for Tropical Countries
+									{t("hero_badge_tropical")}
 								</div>
 							</div>
 							<h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-								German Technology,{" "}
+								{t("hero_title_line1")}{" "}
 								<br className="hidden lg:block" />
-								<span className="text-primary">Expertise from Finland</span>
+								<span className="text-primary">{t("hero_title_line2")}</span>
 							</h1>
 							<p className="text-lg text-gray-600 max-w-lg leading-relaxed">
-								The future of floor restoration. Premium PU Coating that is
-								durable, hygienic, and sustainable. Terrazzo Polishing coming soon.
+								{t("hero_description")}
 							</p>
 							<div className="flex flex-wrap gap-4 pt-2">
 								<Link
 									className="flex h-12 min-w-[160px] items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-white shadow-md hover:bg-blue-700 transition-all hover:shadow-lg"
 									href="/contact"
 								>
-									Request a Free Quote
+									{t("hero_cta_quote")}
 								</Link>
 								<Link
 									className="flex h-12 min-w-[160px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-base font-bold text-gray-700 shadow-sm hover:border-gray-300 hover:bg-gray-50 transition-all"
 									href="/solutions"
 								>
-									Our Solutions
+									{t("hero_cta_solutions")}
 								</Link>
 							</div>
 							<div className="flex items-center gap-4 pt-4 text-sm text-gray-500">
@@ -59,13 +78,13 @@ export default function Home() {
 									<span className="material-symbols-outlined text-green-600 text-[20px]">
 										check_circle
 									</span>
-									<span>Dr. Schutz Certified</span>
+									<span>{t("hero_cert_schutz")}</span>
 								</div>
 								<div className="flex items-center gap-1">
 									<span className="material-symbols-outlined text-green-600 text-[20px]">
 										check_circle
 									</span>
-									<span>ISO 9001 Standards</span>
+									<span>{t("hero_cert_iso")}</span>
 								</div>
 							</div>
 						</div>
@@ -75,8 +94,9 @@ export default function Home() {
 							<ImageComparisonSlider
 								beforeImage="/renovations/warehouse_before.jpeg"
 								afterImage="/renovations/warehouse_after.jpeg"
-								beforeLabel="Before"
-								afterLabel="After Restoration"
+								beforeLabel={t("hero_before")}
+								afterLabel={t("hero_after")}
+								dragLabel={t("drag_to_compare")}
 							/>
 						</div>
 					</div>
@@ -88,12 +108,10 @@ export default function Home() {
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-3xl text-center mb-16">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Don&apos;t Replace—Restore
+							{t("problem_title")}
 						</h2>
 						<p className="mt-4 text-lg text-gray-600">
-							Traditional demolition and repainting is costly, messy, and
-							time-consuming. Our restoration technology saves you money and
-							gets your facility back in operation in hours, not weeks.
+							{t("problem_description")}
 						</p>
 					</div>
 					<div className="grid md:grid-cols-3 gap-8 text-center">
@@ -104,10 +122,10 @@ export default function Home() {
 								</span>
 							</div>
 							<h3 className="text-xl font-bold text-gray-900 mb-2">
-								Save 50% Costs
+								{t("problem_cost_title")}
 							</h3>
 							<p className="text-gray-600">
-								Compared to full demolition and re-tiling of commercial spaces.
+								{t("problem_cost_desc")}
 							</p>
 						</div>
 						<div className="p-6 rounded-xl bg-gray-50 border border-gray-100">
@@ -117,11 +135,10 @@ export default function Home() {
 								</span>
 							</div>
 							<h3 className="text-xl font-bold text-gray-900 mb-2">
-								Save 70% Time
+								{t("problem_time_title")}
 							</h3>
 							<p className="text-gray-600">
-								No jackhammering. No dust clouds. Minimal downtime for your
-								business.
+								{t("problem_time_desc")}
 							</p>
 						</div>
 						<div className="p-6 rounded-xl bg-gray-50 border border-gray-100">
@@ -129,11 +146,10 @@ export default function Home() {
 								<span className="material-symbols-outlined text-3xl">eco</span>
 							</div>
 							<h3 className="text-xl font-bold text-gray-900 mb-2">
-								Eco-Friendly
+								{t("problem_eco_title")}
 							</h3>
 							<p className="text-gray-600">
-								Preserve existing materials and reduce landfill waste
-								significantly.
+								{t("problem_eco_desc")}
 							</p>
 						</div>
 					</div>
@@ -145,11 +161,10 @@ export default function Home() {
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							See the Transformation
+							{t("gallery_title")}
 						</h2>
 						<p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-							Explore our recent projects and witness the dramatic
-							before-and-after results of our floor restoration services.
+							{t("gallery_description")}
 						</p>
 					</div>
 					<BeforeAfterCarousel />
@@ -161,14 +176,13 @@ export default function Home() {
 				className="py-20 bg-white"
 				id="solutions"
 			>
-
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="mb-12">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900">
-							Our Core Solutions
+							{t("solutions_title")}
 						</h2>
 						<p className="mt-2 text-lg text-gray-600">
-							Specialized treatments for industrial and commercial environments.
+							{t("solutions_description")}
 						</p>
 					</div>
 					<div className="grid md:grid-cols-2 gap-8">
@@ -187,39 +201,37 @@ export default function Home() {
 										format_paint
 									</span>
 									<h3 className="text-2xl font-bold text-gray-900">
-										PU Floor Coating
+										{t("pu_title")}
 									</h3>
 								</div>
 								<p className="text-gray-600 mb-6">
-									Heavy-duty transparent or colored protection designed for
-									hospitals, factories, and high-traffic areas. Resistant to
-									chemicals and scratches.
+									{t("pu_description")}
 								</p>
 								<ul className="space-y-2 mb-8">
 									<li className="flex items-center gap-2 text-sm text-gray-600">
 										<span className="material-symbols-outlined text-green-500 text-lg">
 											check
 										</span>{" "}
-										Chemical Resistant
+										{t("pu_feature_chemical")}
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-600">
 										<span className="material-symbols-outlined text-green-500 text-lg">
 											check
 										</span>{" "}
-										Anti-slip R10/R11 Certified
+										{t("pu_feature_antislip")}
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-600">
 										<span className="material-symbols-outlined text-green-500 text-lg">
 											check
 										</span>{" "}
-										Hermetic Sealing
+										{t("pu_feature_hermetic")}
 									</li>
 								</ul>
 								<Link
 									className="inline-flex items-center text-primary font-bold hover:text-blue-700"
 									href="/solutions"
 								>
-									Learn more{" "}
+									{t("learn_more")}{" "}
 									<span className="material-symbols-outlined ml-1 text-sm">
 										arrow_forward
 									</span>
@@ -233,7 +245,7 @@ export default function Home() {
 							<div className="absolute top-4 right-4 z-10">
 								<span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800">
 									<span className="material-symbols-outlined text-sm mr-1">schedule</span>
-									Coming Soon
+									{t("terrazzo_coming_soon")}
 								</span>
 							</div>
 							<div className="aspect-video w-full overflow-hidden">
@@ -249,39 +261,37 @@ export default function Home() {
 										auto_awesome
 									</span>
 									<h3 className="text-2xl font-bold text-gray-900">
-										Terrazzo Polishing
+										{t("terrazzo_title")}
 									</h3>
 								</div>
 								<p className="text-gray-600 mb-6">
-									Revitalize classic floors to a mirror-finish without using
-									waxes. We grind, densify, and polish to bring out the natural
-									beauty of the stone.
+									{t("terrazzo_description")}
 								</p>
 								<ul className="space-y-2 mb-8">
 									<li className="flex items-center gap-2 text-sm text-gray-600">
 										<span className="material-symbols-outlined text-green-500 text-lg">
 											check
 										</span>{" "}
-										Diamond Polishing Tech
+										{t("terrazzo_feature_diamond")}
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-600">
 										<span className="material-symbols-outlined text-green-500 text-lg">
 											check
 										</span>{" "}
-										Stain Protection
+										{t("terrazzo_feature_stain")}
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-600">
 										<span className="material-symbols-outlined text-green-500 text-lg">
 											check
 										</span>{" "}
-										Zero-Wax Maintenance
+										{t("terrazzo_feature_wax")}
 									</li>
 								</ul>
 								<Link
 									className="inline-flex items-center text-primary font-bold hover:text-blue-700"
 									href="/solutions"
 								>
-									Learn more{" "}
+									{t("learn_more")}{" "}
 									<span className="material-symbols-outlined ml-1 text-sm">
 										arrow_forward
 									</span>
@@ -298,11 +308,10 @@ export default function Home() {
 					<div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
 						<div className="max-w-2xl">
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900">
-								Why PU Coating Wins
+								{t("comparison_title")}
 							</h2>
 							<p className="mt-4 text-lg text-gray-600">
-								See how our German-engineered PU Sealer outperforms traditional
-								methods like epoxy and wax in every critical category.
+								{t("comparison_description")}
 							</p>
 						</div>
 						<div className="flex-shrink-0">
@@ -310,7 +319,7 @@ export default function Home() {
 								<span className="material-symbols-outlined mr-2 text-sm">
 									verified
 								</span>{" "}
-								Verified Performance
+								{t("comparison_verified")}
 							</span>
 						</div>
 					</div>
@@ -319,89 +328,88 @@ export default function Home() {
 							<thead className="bg-gray-50 text-gray-900">
 								<tr>
 									<th className="px-6 py-4 font-bold text-base" scope="col">
-										Feature
+										{t("table_feature")}
 									</th>
 									<th
 										className="px-6 py-4 font-bold text-base text-primary"
 										scope="col"
 									>
-										NextGen Floor Solutions PU Sealer
+										{t("table_pu_sealer")}
 									</th>
 									<th
 										className="px-6 py-4 font-bold text-base text-gray-500"
 										scope="col"
 									>
-										Standard Epoxy
+										{t("table_epoxy")}
 									</th>
 									<th
 										className="px-6 py-4 font-bold text-base text-gray-500"
 										scope="col"
 									>
-										Floor Wax
+										{t("table_wax")}
 									</th>
 								</tr>
 							</thead>
 							<tbody className="divide-y divide-gray-200 bg-white">
 								<tr>
 									<td className="px-6 py-4 font-medium text-gray-900">
-										Durability
+										{t("table_durability")}
 									</td>
 									<td className="px-6 py-4 text-primary font-bold flex items-center gap-2">
 										<span className="material-symbols-outlined">verified</span>{" "}
-										Up to 6 Years
+										{t("table_pu_durability")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										1-2 Years
+										{t("table_epoxy_durability")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										3-6 Months
+										{t("table_wax_durability")}
 									</td>
 								</tr>
 								<tr>
 									<td className="px-6 py-4 font-medium text-gray-900">
-										Curing Time
+										{t("table_curing")}
 									</td>
 									<td className="px-6 py-4 text-primary font-bold flex items-center gap-2">
-										<span className="material-symbols-outlined">bolt</span> Fast
-										(12 Hours)
+										<span className="material-symbols-outlined">bolt</span> {t("table_pu_curing")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										Slow (3-5 Days)
+										{t("table_epoxy_curing")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										Fast (Hours)
+										{t("table_wax_curing")}
 									</td>
 								</tr>
 								<tr>
 									<td className="px-6 py-4 font-medium text-gray-900">
-										Maintenance
+										{t("table_maintenance")}
 									</td>
 									<td className="px-6 py-4 text-primary font-bold flex items-center gap-2">
 										<span className="material-symbols-outlined">
 											trending_down
 										</span>{" "}
-										Ultra Low
+										{t("table_pu_maintenance")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										Medium
+										{t("table_epoxy_maintenance")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										Very High
+										{t("table_wax_maintenance")}
 									</td>
 								</tr>
 								<tr>
 									<td className="px-6 py-4 font-medium text-gray-900">
-										Chemical Resistance
+										{t("table_chemical")}
 									</td>
 									<td className="px-6 py-4 text-primary font-bold flex items-center gap-2">
 										<span className="material-symbols-outlined">science</span>{" "}
-										Excellent
+										{t("table_pu_chemical")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										Good
+										{t("table_epoxy_chemical")}
 									</td>
 									<td className="px-6 py-4 text-gray-600">
-										Poor
+										{t("table_wax_chemical")}
 									</td>
 								</tr>
 							</tbody>
@@ -418,21 +426,13 @@ export default function Home() {
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							PU Coating vs Epoxy Coating — What&apos;s the Difference?
+							{t("puvsepoxy_title")}
 						</h2>
 						<p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-							Epoxy coating is known for its hardness and chemical resistance,
-							which is why it&apos;s often used in industrial environments. But
-							hardness also brings challenges: epoxy is rigid and can crack
-							under impact, it yellows under UV light, and most importantly —{" "}
-							<strong>epoxy has a long curing time</strong>. This often means
-							several days of downtime.
+							{t("puvsepoxy_intro1")}
 						</p>
 						<p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-							PU coating, on the other hand, offers a flexible, comfortable, and
-							durable surface that <strong>cures quickly</strong>. PU can be
-							installed in sections, allowing the floor to be coated without
-							major interruptions.
+							{t("puvsepoxy_intro2")}
 						</p>
 					</div>
 
@@ -447,60 +447,20 @@ export default function Home() {
 									</span>
 								</div>
 								<h3 className="text-2xl font-bold text-gray-900">
-									PU Coating
+									{t("puvsepoxy_pu_title")}
 								</h3>
 							</div>
 							<ul className="space-y-4">
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Excellent wear resistance</strong>
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Good flexibility</strong> and comfortable to walk on
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Good chemical resistance</strong>, enough for most
-										environments
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Does not yellow</strong> under sunlight
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Quickly ready for use</strong>, can be applied in
-										sections
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Stylish matte or glossy</strong> finish
-									</span>
-								</li>
+								{([1,2,3,4,5,6] as const).map((n) => (
+									<li key={n} className="flex items-start gap-3">
+										<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
+											&#x2713;
+										</span>
+										<span className="text-gray-700">
+											{t(`puvsepoxy_pu_${n}`)}
+										</span>
+									</li>
+								))}
 							</ul>
 						</div>
 
@@ -513,59 +473,23 @@ export default function Home() {
 									</span>
 								</div>
 								<h3 className="text-2xl font-bold text-gray-900">
-									Epoxy Coating
+									{t("puvsepoxy_epoxy_title")}
 								</h3>
 							</div>
 							<ul className="space-y-4">
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-red-500 text-white font-bold text-lg">
-										✗
-									</span>
-									<span className="text-gray-700">
-										Extremely hard but <strong>can be brittle</strong> under
-										impact
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-red-500 text-white font-bold text-lg">
-										✗
-									</span>
-									<span className="text-gray-700">
-										<strong>Rigid and inflexible</strong>
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Excellent chemical resistance</strong>
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-red-500 text-white font-bold text-lg">
-										✗
-									</span>
-									<span className="text-gray-700">
-										<strong>Can yellow</strong> under UV exposure
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-red-500 text-white font-bold text-lg">
-										✗
-									</span>
-									<span className="text-gray-700">
-										<strong>Long curing time</strong>, causes downtime
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<span className="flex-shrink-0 flex size-7 items-center justify-center rounded bg-primary text-white font-bold text-lg">
-										✓
-									</span>
-									<span className="text-gray-700">
-										<strong>Glossy and smooth</strong> finish
-									</span>
-								</li>
+								{([1,2,3,4,5,6] as const).map((n) => {
+									const isPositive = n === 3 || n === 6;
+									return (
+										<li key={n} className="flex items-start gap-3">
+											<span className={`flex-shrink-0 flex size-7 items-center justify-center rounded ${isPositive ? "bg-primary" : "bg-red-500"} text-white font-bold text-lg`}>
+												{isPositive ? "\u2713" : "\u2717"}
+											</span>
+											<span className="text-gray-700">
+												{t(`puvsepoxy_epoxy_${n}`)}
+											</span>
+										</li>
+									);
+								})}
 							</ul>
 						</div>
 					</div>
@@ -573,13 +497,13 @@ export default function Home() {
 					{/* CTA */}
 					<div className="mt-12 text-center">
 						<p className="text-lg text-gray-600 mb-6">
-							Ready to upgrade from traditional epoxy to modern PU technology?
+							{t("puvsepoxy_cta")}
 						</p>
 						<Link
 							className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-white shadow-md hover:bg-blue-700 transition-all hover:shadow-lg"
 							href="/contact"
 						>
-							Get a Free Consultation
+							{t("puvsepoxy_cta_button")}
 						</Link>
 					</div>
 				</div>
@@ -594,12 +518,10 @@ export default function Home() {
 					<div className="grid lg:grid-cols-2 gap-16 items-center">
 						<div>
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
-								Sustainable &amp; Safe
+								{t("sustainability_title")}
 							</h2>
 							<p className="text-lg text-gray-600 mb-8">
-								We prioritize the environment and the health of your
-								building&apos;s occupants. Our water-based solutions are low-VOC
-								and reduce water consumption significantly.
+								{t("sustainability_description")}
 							</p>
 							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 								<div className="flex items-start gap-4">
@@ -610,10 +532,10 @@ export default function Home() {
 									</div>
 									<div>
 										<h4 className="font-bold text-gray-900">
-											80% Water Savings
+											{t("sustainability_water_title")}
 										</h4>
 										<p className="text-sm text-gray-600">
-											Reduced cleaning water usage over floor lifespan.
+											{t("sustainability_water_desc")}
 										</p>
 									</div>
 								</div>
@@ -623,17 +545,17 @@ export default function Home() {
 									</div>
 									<div>
 										<h4 className="font-bold text-gray-900">
-											Antimicrobial
+											{t("sustainability_antimicrobial_title")}
 										</h4>
 										<p className="text-sm text-gray-600">
-											Seamless surface prevents bacterial growth.
+											{t("sustainability_antimicrobial_desc")}
 										</p>
 									</div>
 								</div>
 							</div>
 							<div className="mt-10 pt-10 border-t border-gray-200">
 								<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-									Trusted By Leaders
+									{t("sustainability_trusted")}
 								</p>
 								<div className="flex flex-wrap items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
 									<div className="flex items-center gap-2 font-bold text-xl text-gray-800">
@@ -660,7 +582,7 @@ export default function Home() {
 										20+
 									</span>
 									<span className="text-sm font-medium text-gray-600">
-										Years Experience
+										{t("sustainability_years")}
 									</span>
 								</div>
 								<div className="bg-primary p-6 rounded-2xl shadow-sm h-48 flex flex-col justify-center items-center text-center text-white relative overflow-hidden group">
@@ -669,7 +591,7 @@ export default function Home() {
 										school
 									</span>
 									<span className="text-sm font-medium relative z-10">
-										German-Trained Teams
+										{t("sustainability_german_teams")}
 									</span>
 								</div>
 							</div>
@@ -679,7 +601,7 @@ export default function Home() {
 										engineering
 									</span>
 									<span className="text-sm font-medium">
-										Expertise from Finland
+										{t("sustainability_finland")}
 									</span>
 								</div>
 								<div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-40 flex flex-col justify-center items-center text-center">
@@ -687,7 +609,7 @@ export default function Home() {
 										10k+
 									</span>
 									<span className="text-sm font-medium text-gray-600">
-										Sqm Restored
+										{t("sustainability_sqm")}
 									</span>
 								</div>
 							</div>

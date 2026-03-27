@@ -7,6 +7,7 @@ interface ImageComparisonSliderProps {
     afterImage: string;
     beforeLabel?: string;
     afterLabel?: string;
+    dragLabel?: string;
 }
 
 export default function ImageComparisonSlider({
@@ -14,6 +15,7 @@ export default function ImageComparisonSlider({
     afterImage,
     beforeLabel = "Before",
     afterLabel = "After",
+    dragLabel = "Drag to compare",
 }: ImageComparisonSliderProps) {
     const [sliderPosition, setSliderPosition] = useState(50);
     const [isDragging, setIsDragging] = useState(false);
@@ -155,7 +157,7 @@ export default function ImageComparisonSlider({
             {/* Instruction hint - shows briefly */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-medium border border-white/20 flex items-center gap-2 animate-pulse">
                 <span className="material-symbols-outlined text-sm">swipe</span>
-                Drag to compare
+                {dragLabel}
             </div>
         </div>
     );

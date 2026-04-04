@@ -37,6 +37,7 @@ export default function ContactFormClient() {
 	const [files, setFiles] = useState<File[]>([]);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+	const [errorDetail, setErrorDetail] = useState("");
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
 	const validateField = (name: string, value: string): string | undefined => {
@@ -144,7 +145,8 @@ export default function ContactFormClient() {
 			});
 
 			if (!response.ok) {
-				throw new Error("Failed to send");
+				const data = (await response.json().catch(() => null)) as { error?: string } | null;
+				throw new Error(data?.error || "Failed to send");
 			}
 
 			setSubmitStatus("success");
@@ -160,7 +162,8 @@ export default function ContactFormClient() {
 			setFiles([]);
 			setTouched({});
 			setErrors({});
-		} catch {
+		} catch (err) {
+			setErrorDetail(err instanceof Error ? err.message : "");
 			setSubmitStatus("error");
 		} finally {
 			setIsSubmitting(false);
@@ -187,7 +190,7 @@ export default function ContactFormClient() {
 				<div className="p-4 rounded-lg bg-red-50 border border-red-200">
 					<div className="flex items-center gap-2 text-red-700">
 						<span className="material-symbols-outlined">error</span>
-						<p className="font-medium">{t("error_message")}</p>
+						<p className="font-medium">{t("error_message")}{errorDetail && ` (${errorDetail})`}</p>
 					</div>
 				</div>
 			)}

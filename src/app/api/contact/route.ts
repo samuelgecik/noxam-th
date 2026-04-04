@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
 			.filter(Boolean)
 			.join("\n");
 
-		await resend.emails.send({
+		const { data, error: sendError } = await resend.emails.send({
 			from: `NextGen Floors <${SENDER_EMAIL}>`,
 			to: RECIPIENT_EMAIL,
 			replyTo: email,
@@ -84,7 +84,15 @@ export async function POST(request: NextRequest) {
 				attachments.length > 0 ? attachments : undefined,
 		});
 
-		return NextResponse.json({ success: true });
+		if (sendError) {
+			console.error("Resend error:", sendError);
+			return NextResponse.json(
+				{ error: sendError.message },
+				{ status: 422 }
+			);
+		}
+
+		return NextResponse.json({ success: true, id: data?.id });
 	} catch (error) {
 		console.error("Contact form error:", error);
 		const message =

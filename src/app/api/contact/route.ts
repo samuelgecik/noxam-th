@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "edge";
 
 const RECIPIENT_EMAIL = "samo.eshopper@gmail.com";
-const SENDER_EMAIL = "form@nextgenfloor.co.th";
+const SENDER_EMAIL = "form@mail.nextgenfloors.co.th";
 
 export async function POST(request: NextRequest) {
 	try {

@@ -128,8 +128,24 @@ export default function ContactFormClient() {
 		setSubmitStatus("idle");
 
 		try {
-			await new Promise((resolve) => setTimeout(resolve, 1500));
-			console.log("Form submitted:", formData, files);
+			const body = new FormData();
+			body.append("name", formData.name);
+			body.append("email", formData.email);
+			body.append("phone", formData.phone);
+			body.append("company", formData.company);
+			body.append("service", formData.service);
+			body.append("size", formData.size);
+			body.append("message", formData.message);
+			files.forEach((file) => body.append("files", file));
+
+			const response = await fetch("/api/contact", {
+				method: "POST",
+				body,
+			});
+
+			if (!response.ok) {
+				throw new Error("Failed to send");
+			}
 
 			setSubmitStatus("success");
 			setFormData({

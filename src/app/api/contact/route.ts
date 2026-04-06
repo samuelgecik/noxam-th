@@ -1,14 +1,18 @@
-import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
-
-export const runtime = "edge";
 
 const RECIPIENT_EMAIL = "samo.eshopper@gmail.com";
 const SENDER_EMAIL = "form@mail.nextgenfloors.co.th";
 
 export async function POST(request: NextRequest) {
 	try {
-		const resend = new Resend(process.env.RESEND_API_KEY);
+		const apiKey = process.env.RESEND_API_KEY;
+
+		if (!apiKey) {
+			return NextResponse.json(
+				{ error: "RESEND_API_KEY is not configured" },
+				{ status: 500 }
+			);
+		}
 
 		const formData = await request.formData();
 
@@ -56,7 +60,7 @@ export async function POST(request: NextRequest) {
 		};
 
 		const textBody = [
-			`New contact form submission from nextgenfloor.co.th`,
+			`New contact form submission from nextgenfloors.co.th`,
 			``,
 			`Name: ${name}`,
 			`Email: ${email}`,
@@ -74,31 +78,44 @@ export async function POST(request: NextRequest) {
 			.filter(Boolean)
 			.join("\n");
 
-		const { data, error: sendError } = await resend.emails.send({
-			from: `NextGen Floors <${SENDER_EMAIL}>`,
-			to: RECIPIENT_EMAIL,
-			replyTo: email,
+		const payload: Record<string, unknown> = {
+			from: `NextGen Floors - Form <${SENDER_EMAIL}>`,
+			to: [RECIPIENT_EMAIL],
+			reply_to: [email],
 			subject: `Contact Form: ${name} — ${serviceLabels[service] || service}`,
 			text: textBody,
-			attachments:
-				attachments.length > 0 ? attachments : undefined,
+		};
+
+		if (attachments.length > 0) {
+			payload.attachments = attachments;
+		}
+
+		const response = await fetch("https://api.resend.com/emails", {
+			method: "POST",
+			headers: {
+				Authorization: `Bearer ${apiKey}`,
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(payload),
 		});
 
-		if (sendError) {
-			console.error("Resend error:", sendError);
+		const result = await response.json();
+
+		if (!response.ok) {
+			console.error("Resend error:", result);
 			return NextResponse.json(
-				{ error: sendError.message },
-				{ status: 422 }
+				{ error: (result as { message?: string }).message || "Failed to send email" },
+				{ status: response.status }
 			);
 		}
 
-		return NextResponse.json({ success: true, id: data?.id });
+		return NextResponse.json({ success: true, id: (result as { id: string }).id });
 	} catch (error) {
 		console.error("Contact form error:", error);
-		const message =
+		const msg =
 			error instanceof Error ? error.message : "Failed to send message";
 		return NextResponse.json(
-			{ error: message },
+			{ error: msg },
 			{ status: 500 }
 		);
 	}

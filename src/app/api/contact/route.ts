@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const RECIPIENT_EMAIL = "samo.eshopper@gmail.com";
+const RECIPIENT_EMAIL = "sales@nextgenfloors.co.th";
 const SENDER_EMAIL = "form@mail.nextgenfloors.co.th";
 
 export async function POST(request: NextRequest) {

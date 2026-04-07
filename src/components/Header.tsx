@@ -39,28 +39,6 @@ export default function Header() {
 		<>
 			<button
 				className={`flex items-center gap-1 px-2 py-1.5 rounded-md transition-colors ${
-					locale === "en"
-						? "bg-primary/10 border border-primary/20"
-						: "hover:bg-gray-100"
-				}`}
-				title="English"
-				onClick={() => switchLocale("en")}
-			>
-				<img
-					src="https://flagcdn.com/w20/us.png"
-					alt="English"
-					className="w-5 h-auto rounded-sm"
-				/>
-				<span
-					className={`text-xs font-bold ${
-						locale === "en" ? "text-primary" : "text-gray-600"
-					}`}
-				>
-					ENG
-				</span>
-			</button>
-			<button
-				className={`flex items-center gap-1 px-2 py-1.5 rounded-md transition-colors ${
 					locale === "th"
 						? "bg-primary/10 border border-primary/20"
 						: "hover:bg-gray-100"
@@ -79,6 +57,28 @@ export default function Header() {
 					}`}
 				>
 					ไทย
+				</span>
+			</button>
+			<button
+				className={`flex items-center gap-1 px-2 py-1.5 rounded-md transition-colors ${
+					locale === "en"
+						? "bg-primary/10 border border-primary/20"
+						: "hover:bg-gray-100"
+				}`}
+				title="English"
+				onClick={() => switchLocale("en")}
+			>
+				<img
+					src="https://flagcdn.com/w20/us.png"
+					alt="English"
+					className="w-5 h-auto rounded-sm"
+				/>
+				<span
+					className={`text-xs font-bold ${
+						locale === "en" ? "text-primary" : "text-gray-600"
+					}`}
+				>
+					ENG
 				</span>
 			</button>
 		</>

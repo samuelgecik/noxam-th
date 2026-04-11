@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -49,14 +49,17 @@ export default async function LocaleLayout({ children, params }: Props) {
 		<html lang={locale}>
 			<head>
 				<link rel="icon" href="/favicon.png" type="image/png" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 				<link
-					href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+					href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&FILL@0&display=swap"
 					rel="stylesheet"
 				/>
 				<link
-					href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap"
+					href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=optional"
 					rel="stylesheet"
 				/>
+				<link rel="preload" as="image" href="/renovations/warehouse_after.jpeg" fetchPriority="high" />
 			</head>
 			<body className="bg-background-light text-accent font-display antialiased">
 				<SchemaMarkup

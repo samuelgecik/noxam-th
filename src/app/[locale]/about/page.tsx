@@ -197,6 +197,9 @@ export default function AboutPage() {
 									alt="Before and after of a commercial floor restoration"
 									className="h-full w-full object-cover"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuD04dLMezB9DysoiFc_2Va6mbAHEh_z1L6rUXvnTPvPd0l6RkJFk1rj2Dm4EkMXefoX1HKcLpVmdKcuByy2lj0SxU1Q_C23At4pSgg_uhlADJ0M1tb4RH9KMy0PDaVwJyBNy90owFGkaV4JeDNtuuvD0XKbEkOo5Ga5PjG0VA_Gjo-zhhJ9j2kRUW4EKY_G0bVfu98MKvkbyIb0n2HALEwNdDW9bZEqNU0d6ZCW2r6q-fd9Gp32GwDsBuMm25-_3SxXdEO-0NyMva5S"
+									width={600}
+									height={450}
+									loading="lazy"
 								/>
 								<div className="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">
 									{t("ref_industrial")}
@@ -217,6 +220,9 @@ export default function AboutPage() {
 									alt="Terrazzo floor polishing result"
 									className="h-full w-full object-cover"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ1p_a2U286cXBwg9SnmBrv-rki1APEUWUFx-lBgz6bTUuGsG2wcLY86JAlgRp_O3ANC2qEnc5S6SEAjfxSfl2rRIyaxSUSNNPfb64HyEjQoALIsLOXnq-lp12Abs0eqiwU9Wfjy709xFYFcWf2J1YPTaFsW9cJnPsPR5HOwclU1BquO7QR_FcslAo5KAgZM0IpHwsPWhHfEPab-yJB_WJ7ulVCHofhD87_mliWF0PhpfCNM2Tz_1NWSWSTbqHUWwCuv3XsmWXQLh8"
+									width={600}
+									height={450}
+									loading="lazy"
 								/>
 								<div className="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">
 									{t("ref_commercial")}
@@ -237,6 +243,9 @@ export default function AboutPage() {
 									alt="Hospital floor restoration"
 									className="h-full w-full object-cover"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmZsc5-4iJkcUtlqsRsFEzC1STz8AoxUPtXK2lDrVPt9QQ_B0e6vLr6F4QvjCHXt4IeX5zjni8CutU9kWGYFUOPkApteKJtQpgWOs7VeBCkF1Jzw662yCE7kjSyWQWt1RSld6dd-tLN_U2S7YKfYlprE-m8r7EJ2zu1b6sHiIFmXcHckXXeAJn1N3i66kj0-uhsS1y5-ySJEmLW5OQOTOheto5SiZgJmDNELEv8jxngHSLhlSYQCTB9Avx1hnNzLqSIPWid83c6OTy"
+									width={600}
+									height={450}
+									loading="lazy"
 								/>
 								<div className="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">
 									{t("ref_healthcare")}
@@ -335,6 +344,9 @@ export default function AboutPage() {
 								alt="Professional floor restoration team at work"
 								className="w-full h-[400px] object-cover"
 								src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJwIwgIqSTJuvb6bJWRE_kyg3Qsdy1pLPXVptjpOzmwcn2XPDqwn2JO7EYIaELNTHed8Z9-cr_cIUs1ijUUHNRDpoOUKybJXNIzty7p_4Tz04qZE8mP8SRY6k1hOIUqu00HkEM-wbo4cR728WDbi6GmPuwYFjQ0-UfifG7su78zKIBKMebiFQBDnKCylfY4Pq0_Jtg3MJJQi7HcVQq-apL_PxcvCYvmKrPZ95cpsfJnwlGrctwwomiIn-amhLxXk7ZmTom455OX9vg"
+								width={800}
+								height={400}
+								loading="lazy"
 							/>
 							<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
 								<p className="text-white font-bold text-lg">

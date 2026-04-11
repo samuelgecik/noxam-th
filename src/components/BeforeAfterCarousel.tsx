@@ -158,6 +158,9 @@ export default function BeforeAfterCarousel() {
                             src={project.afterImage}
                             alt={t(project.titleKey)}
                             className="w-full h-full object-cover"
+                            width={80}
+                            height={80}
+                            loading="lazy"
                         />
                     </button>
                 ))}

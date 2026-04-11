@@ -107,6 +107,9 @@ export default function ImageComparisonSlider({
                 src={afterImage}
                 alt="After restoration"
                 className="absolute inset-0 w-full h-full object-cover"
+                width={1200}
+                height={800}
+                fetchPriority="high"
                 draggable={false}
             />
 
@@ -119,6 +122,8 @@ export default function ImageComparisonSlider({
                     src={beforeImage}
                     alt="Before restoration"
                     className="absolute top-0 left-0 h-full object-cover"
+                    width={1200}
+                    height={800}
                     style={{
                         width: containerWidth ? `${containerWidth}px` : "100vw",
                         minWidth: containerWidth ? `${containerWidth}px` : "100vw",

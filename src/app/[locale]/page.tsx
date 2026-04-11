@@ -193,6 +193,9 @@ export default function Home() {
 									alt="Shiny light grey polyurethane coated floor in a clean laboratory setting"
 									className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuoKtT9cadsdpweOC0hlZx8fSq9-dmk9pi1f7QH3p6Eq5Uwr7EhZcwXofrDa4kAuFuvQe51HNO9AShwudvrt7ecqLWYHKp80M014UKPB0BlZFbRZN6FiM3yWXAWsVhEcnOugpH6gLPS-r_iDsK_lo_Tuyj2OWBra_QDma2_UY5ZECqHvRt_PI5YxCA2b2qoysuXWdYUaP4n414nh_LNtcXX3yNlxJ3x87q2UFu7x-zZaMN1bcnnDSZKqYNY8hjIeN31Um7_MDsSLIz"
+									width={800}
+									height={450}
+									loading="lazy"
 								/>
 							</div>
 							<div className="p-8">
@@ -253,6 +256,9 @@ export default function Home() {
 									alt="Close up texture of polished terrazzo flooring with colorful stone chips"
 									className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ1p_a2U286cXBwg9SnmBrv-rki1APEUWUFx-lBgz6bTUuGsG2wcLY86JAlgRp_O3ANC2qEnc5S6SEAjfxSfl2rRIyaxSUSNNPfb64HyEjQoALIsLOXnq-lp12Abs0eqiwU9Wfjy709xFYFcWf2J1YPTaFsW9cJnPsPR5HOwclU1BquO7QR_FcslAo5KAgZM0IpHwsPWhHfEPab-yJB_WJ7ulVCHofhD87_mliWF0PhpfCNM2Tz_1NWSWSTbqHUWwCuv3XsmWXQLh8"
+									width={800}
+									height={450}
+									loading="lazy"
 								/>
 							</div>
 							<div className="p-8">

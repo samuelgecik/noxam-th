@@ -49,6 +49,8 @@ export default function Header() {
 				<img
 					src="https://flagcdn.com/w20/th.png"
 					alt="ไทย"
+					width={20}
+					height={15}
 					className="w-5 h-auto rounded-sm"
 				/>
 				<span
@@ -71,6 +73,8 @@ export default function Header() {
 				<img
 					src="https://flagcdn.com/w20/gb.png"
 					alt="English"
+					width={20}
+					height={15}
 					className="w-5 h-auto rounded-sm"
 				/>
 				<span

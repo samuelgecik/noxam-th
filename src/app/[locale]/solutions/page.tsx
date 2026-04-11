@@ -95,6 +95,8 @@ export default function SolutionsPage() {
 						alt="Industrial floor background"
 						className="h-full w-full object-cover grayscale mix-blend-multiply"
 						src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJwIwgIqSTJuvb6bJWRE_kyg3Qsdy1pLPXVptjpOzmwcn2XPDqwn2JO7EYIaELNTHed8Z9-cr_cIUs1ijUUHNRDpoOUKybJXNIzty7p_4Tz04qZE8mP8SRY6k1hOIUqu00HkEM-wbo4cR728WDbi6GmPuwYFjQ0-UfifG7su78zKIBKMebiFQBDnKCylfY4Pq0_Jtg3MJJQi7HcVQq-apL_PxcvCYvmKrPZ95cpsfJnwlGrctwwomiIn-amhLxXk7ZmTom455OX9vg"
+						width={1920}
+						height={400}
 					/>
 				</div>
 				<div className="absolute inset-0 z-0 bg-gradient-to-r from-background-dark via-background-dark/90 to-transparent"></div>
@@ -137,6 +139,9 @@ export default function SolutionsPage() {
 									alt="PU Floor Coating"
 									className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuoKtT9cadsdpweOC0hlZx8fSq9-dmk9pi1f7QH3p6Eq5Uwr7EhZcwXofrDa4kAuFuvQe51HNO9AShwudvrt7ecqLWYHKp80M014UKPB0BlZFbRZN6FiM3yWXAWsVhEcnOugpH6gLPS-r_iDsK_lo_Tuyj2OWBra_QDma2_UY5ZECqHvRt_PI5YxCA2b2qoysuXWdYUaP4n414nh_LNtcXX3yNlxJ3x87q2UFu7x-zZaMN1bcnnDSZKqYNY8hjIeN31Um7_MDsSLIz"
+									width={600}
+									height={300}
+									loading="lazy"
 								/>
 							</div>
 							<div className="p-6">
@@ -173,6 +178,9 @@ export default function SolutionsPage() {
 									alt="Terrazzo Polishing"
 									className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ1p_a2U286cXBwg9SnmBrv-rki1APEUWUFx-lBgz6bTUuGsG2wcLY86JAlgRp_O3ANC2qEnc5S6SEAjfxSfl2rRIyaxSUSNNPfb64HyEjQoALIsLOXnq-lp12Abs0eqiwU9Wfjy709xFYFcWf2J1YPTaFsW9cJnPsPR5HOwclU1BquO7QR_FcslAo5KAgZM0IpHwsPWhHfEPab-yJB_WJ7ulVCHofhD87_mliWF0PhpfCNM2Tz_1NWSWSTbqHUWwCuv3XsmWXQLh8"
+									width={600}
+									height={300}
+									loading="lazy"
 								/>
 							</div>
 							<div className="p-6">
@@ -203,6 +211,9 @@ export default function SolutionsPage() {
 									alt="Laboratory science"
 									className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 									src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMKxVYHHq5vXkTrP9pANX-nFvNFY8no4YynNiO1btJP8iBEFOaNC0joo8nbkk6WsJhQv5SYe_gvK5uVaGlKNt4PuH8STCN7iLcdUHjLoOurFWgqZd0b3YZSH6GGfLRwJX_5t0MEmi0QJ7ajPQO2ggMjJhgotHYEiXEmfr8xDQt7FGUNN8rz10Fo2ipqBe9z6sCXq6ZH6U1fAsWI_fTy5mHajzHS8MNesYUEJSL2QQKS8G4_Q_kU0qirW4QZScOa4hYFEtyGIQwtZtH"
+									width={600}
+									height={300}
+									loading="lazy"
 								/>
 								<div className="absolute inset-0 bg-primary/10"></div>
 							</div>
@@ -347,6 +358,9 @@ export default function SolutionsPage() {
 									alt={t(`sector_${sector.key}_title`)}
 									className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
 									src={sector.img}
+									width={600}
+									height={400}
+									loading="lazy"
 								/>
 								<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 								<div className="absolute bottom-0 left-0 p-8 w-full">

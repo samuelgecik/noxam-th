@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Footer from "@/components/Footer";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 export async function generateMetadata({
 	params,
@@ -24,6 +25,69 @@ export default function SolutionsPage() {
 	const t = useTranslations("solutions");
 	return (
 		<>
+			<SchemaMarkup
+				data={[
+					{
+						"@context": "https://schema.org",
+						"@type": "Service",
+						"@id": "https://nextgenfloors.co.th/#service-pu-coating",
+						name: "PU Floor Coating",
+						description:
+							"Heavy-duty polyurethane floor protection for hospitals, factories, and high-traffic areas. Chemical resistant, anti-slip R10/R11 certified, Dr. Schutz certified application. Up to 6-year durability, walkable within 12 hours.",
+						provider: {
+							"@id": "https://nextgenfloors.co.th/#localbusiness",
+						},
+						areaServed: { "@type": "Country", name: "Thailand" },
+						serviceType: "Floor Coating",
+					},
+					{
+						"@context": "https://schema.org",
+						"@type": "Service",
+						"@id": "https://nextgenfloors.co.th/#service-terrazzo",
+						name: "Terrazzo Floor Polishing",
+						description:
+							"Sustainable diamond polishing to restore natural stone terrazzo floors to a mirror finish without waxes. Zero-wax maintenance after treatment.",
+						provider: {
+							"@id": "https://nextgenfloors.co.th/#localbusiness",
+						},
+						areaServed: { "@type": "Country", name: "Thailand" },
+						serviceType: "Floor Polishing",
+					},
+					{
+						"@context": "https://schema.org",
+						"@type": "Service",
+						"@id": "https://nextgenfloors.co.th/#service-additives",
+						name: "Functional Floor Additives",
+						description:
+							"Specialized protective additives including antimicrobial (VIR-O-BAC), anti-slip (SLIPNOMORE), and ESD electrostatic discharge protection for floor coatings.",
+						provider: {
+							"@id": "https://nextgenfloors.co.th/#localbusiness",
+						},
+						areaServed: { "@type": "Country", name: "Thailand" },
+						serviceType: "Floor Treatment",
+					},
+				]}
+			/>
+			<SchemaMarkup
+				data={{
+					"@context": "https://schema.org",
+					"@type": "BreadcrumbList",
+					itemListElement: [
+						{
+							"@type": "ListItem",
+							position: 1,
+							name: "Home",
+							item: "https://nextgenfloors.co.th",
+						},
+						{
+							"@type": "ListItem",
+							position: 2,
+							name: "Solutions",
+							item: "https://nextgenfloors.co.th/en/solutions",
+						},
+					],
+				}}
+			/>
 			{/* Hero Section */}
 			<section className="relative overflow-hidden bg-background-dark min-h-[400px] max-h-[400px] flex items-center justify-center">
 				<div className="absolute inset-0 z-0 opacity-40">

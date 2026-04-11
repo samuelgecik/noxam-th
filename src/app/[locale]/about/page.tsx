@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 export async function generateMetadata({
 	params,
@@ -23,6 +24,77 @@ export default function AboutPage() {
 	const t = useTranslations("about");
 	return (
 		<>
+			<SchemaMarkup
+				data={{
+					"@context": "https://schema.org",
+					"@type": "Organization",
+					"@id": "https://nextgenfloors.co.th/#organization",
+					name: "NextGen Floor Solutions Thailand",
+					url: "https://nextgenfloors.co.th",
+					logo: "https://nextgenfloors.co.th/logo.png",
+					foundingDate: "2004",
+					description:
+						"Premier floor restoration company operating in Thailand since 2004, using German-engineered PU coating technology and Finnish operational expertise.",
+					address: {
+						"@type": "PostalAddress",
+						streetAddress: "999/4 Moo 12",
+						addressLocality: "Nong Prue, BangLamung",
+						addressRegion: "Chonburi",
+						postalCode: "20150",
+						addressCountry: "TH",
+					},
+					hasCredential: [
+						{
+							"@type": "EducationalOccupationalCredential",
+							name: "ISO 9001:2015",
+							description: "Quality Management System certification",
+						},
+						{
+							"@type": "EducationalOccupationalCredential",
+							name: "ISO 14001:2015",
+							description: "Environmental Management System certification",
+						},
+						{
+							"@type": "EducationalOccupationalCredential",
+							name: "ISO 45001:2018",
+							description: "Occupational Health and Safety certification",
+						},
+						{
+							"@type": "EducationalOccupationalCredential",
+							name: "Dr. Schutz Certified Applicator",
+							description:
+								"Certified applicator of Dr. Schutz floor coating systems",
+						},
+					],
+					knowsAbout: [
+						"PU Floor Coating",
+						"Terrazzo Polishing",
+						"Floor Restoration",
+						"Industrial Flooring",
+						"Antimicrobial Coatings",
+					],
+				}}
+			/>
+			<SchemaMarkup
+				data={{
+					"@context": "https://schema.org",
+					"@type": "BreadcrumbList",
+					itemListElement: [
+						{
+							"@type": "ListItem",
+							position: 1,
+							name: "Home",
+							item: "https://nextgenfloors.co.th",
+						},
+						{
+							"@type": "ListItem",
+							position: 2,
+							name: "About Us",
+							item: "https://nextgenfloors.co.th/en/about",
+						},
+					],
+				}}
+			/>
 			{/* Hero Section */}
 			<section
 				className="relative w-full min-h-[400px] max-h-[400px] flex items-center justify-center bg-cover bg-center bg-no-repeat"

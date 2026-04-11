@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import ContactFormClient from "./ContactFormClient";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 export async function generateMetadata({
 	params,
@@ -24,6 +25,26 @@ export default function ContactPage() {
 	const t = useTranslations("contact");
 	return (
 		<>
+			<SchemaMarkup
+				data={{
+					"@context": "https://schema.org",
+					"@type": "BreadcrumbList",
+					itemListElement: [
+						{
+							"@type": "ListItem",
+							position: 1,
+							name: "Home",
+							item: "https://nextgenfloors.co.th",
+						},
+						{
+							"@type": "ListItem",
+							position: 2,
+							name: "Contact",
+							item: "https://nextgenfloors.co.th/en/contact",
+						},
+					],
+				}}
+			/>
 			{/* Hero Section */}
 			<section className="relative bg-gradient-to-br from-primary to-blue-900 min-h-[400px] max-h-[400px] flex items-center justify-center">
 				<div
@@ -155,7 +176,7 @@ export default function ContactPage() {
 							{/* Google Maps */}
 							<div className="relative h-64 rounded-2xl overflow-hidden border border-gray-200">
 								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5402061489777!2d100.56236907515826!3d13.743399797567445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ee9c1234567%3A0xabcdef1234567890!2sSukhumvit%20Road%2C%20Bangkok!5e0!3m2!1sen!2sth!4v1707234567890!5m2!1sen!2sth"
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d100.8841!3d12.9378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU2JzE2LjEiTiAxMDDCsDUzJzAyLjgiRQ!5e0!3m2!1sen!2sth"
 									width="100%"
 									height="100%"
 									style={{ border: 0 }}

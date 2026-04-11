@@ -13,9 +13,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
 	const solutions = (await import(`@/messages/${locale}/solutions.json`))
 		.default;
 	const contact = (await import(`@/messages/${locale}/contact.json`)).default;
+	const privacy = (await import(`@/messages/${locale}/privacy.json`)).default;
+	const terms = (await import(`@/messages/${locale}/terms.json`)).default;
 
 	return {
 		locale,
-		messages: { common, home, about, solutions, contact },
+		messages: { common, home, about, solutions, contact, privacy, terms },
 	};
 });

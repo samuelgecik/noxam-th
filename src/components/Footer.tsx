@@ -119,13 +119,13 @@ export default function Footer() {
 					<div className="flex items-center gap-6">
 						<Link
 							className="text-sm text-gray-500 hover:text-primary"
-							href="#"
+							href="/privacy"
 						>
 							{t("footer_privacy")}
 						</Link>
 						<Link
 							className="text-sm text-gray-500 hover:text-primary"
-							href="#"
+							href="/terms"
 						>
 							{t("footer_terms")}
 						</Link>

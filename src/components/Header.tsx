@@ -69,7 +69,7 @@ export default function Header() {
 				onClick={() => switchLocale("en")}
 			>
 				<img
-					src="https://flagcdn.com/w20/us.png"
+					src="https://flagcdn.com/w20/gb.png"
 					alt="English"
 					className="w-5 h-auto rounded-sm"
 				/>
